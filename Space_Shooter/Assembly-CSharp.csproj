@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{31EA003C-1CF9-D946-A919-8AC5ED6BE76A}</ProjectGuid>
+    <ProjectGuid>{6F4D1449-99C3-B60A-6C3A-862810D457C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,38 +62,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\CameraFollow.cs" />
     <Compile Include="Assets\_Scripts\Isometric_Cam.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_BasicProjectileMovement.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_DisperseStyle.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyHealth.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyMovement.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SingleShotStyle.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SpreadStyle.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SwirlStyle.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_TrackingProjectile.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_TurretStyle.cs" />
     <Compile Include="Assets\_Scripts\NextRoom.cs" />
-    <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\_Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\_Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\_Scripts\TopDownMovement.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
+    <None Include="Assets\HiRezSpaceshipsCreatorFree\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -279,13 +289,13 @@
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
