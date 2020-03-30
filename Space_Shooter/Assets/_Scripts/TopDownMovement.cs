@@ -7,18 +7,14 @@ public class TopDownMovement : MonoBehaviour
 
     public float moveSpeed;
     public float rotSpeed = 7f;
-    public Transform MainCam;
     public GameObject PlayerObj;
-    CharacterController controller;
-    float curSpeed;
-    float speedSmoothVel;
-    float speedSmoothTime = .1f;
+    Rigidbody Rig;
+    Vector3 movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        MainCam = Camera.main.transform;
+        Rig = GetComponent<Rigidbody>();   
     }
 
     // Update is called once per frame
@@ -38,28 +34,17 @@ public class TopDownMovement : MonoBehaviour
             PlayerObj.transform.rotation = Quaternion.Slerp(PlayerObj.transform.rotation, targetRotation, rotSpeed * Time.deltaTime);
         }
 
+        movement.z = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void LateUpdate()
+    {
         Move();
     }
 
     private void Move()
     {
-        Vector2 movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector3 forward = MainCam.forward;
-        Vector3 right = MainCam.right;
-
-        forward.y = 0;
-        right.y = 0;
-
-        forward.Normalize();
-        right.Normalize();
-
-        Vector3 desiredMoveDir = (forward * movementInput.y + right * movementInput.x).normalized;
-        //Vector3 gravityVector = Vector3.zero;
-
-        float targetSpeed = moveSpeed * movementInput.magnitude;
-        curSpeed = Mathf.SmoothDamp(curSpeed, targetSpeed, ref speedSmoothVel, speedSmoothTime);
-
-        controller.Move(desiredMoveDir * curSpeed * Time.deltaTime);
-        //controller.Move(gravityVector * Time.deltaTime);
+        Rig.MovePosition(Rig.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
