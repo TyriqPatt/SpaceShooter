@@ -9,13 +9,15 @@ public class JR_EnemyMovement : MonoBehaviour
     private NavMeshAgent navAgent;
 
     private GameObject player;
-    private float distance; 
+    private float distance;
 
+    private Vector3 playerVec;
     // Start is called before the first frame update
     void Start()
     {
         navAgent = gameObject.GetComponent<NavMeshAgent>();
-        player = GameObject.FindGameObjectWithTag("Player"); 
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerVec = new Vector3(player.transform.position.x, 0, player.transform.position.z);   
 
       
     }
@@ -23,23 +25,19 @@ public class JR_EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform);
+        transform.LookAt(player.transform); 
 
 
         switch (MovementType)
         {
             case 3:
-                print("Something");
                 break;
             case 2:
                 EnemyMove();
-                print("Moving");
                 break;
             case 1:
-                print("Stationary");
                 break;
             default:
-                print("Nothing");
                 break;
         }
 
