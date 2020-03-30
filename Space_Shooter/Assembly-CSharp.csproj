@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Scripts\Canons.cs" />
     <Compile Include="Assets\_Scripts\Isometric_Cam.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_BasicProjectileMovement.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_DisperseStyle.cs" />
@@ -73,11 +74,27 @@
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SwirlStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_TrackingProjectile.cs" />
     <Compile Include="Assets\_Scripts\NextRoom.cs" />
+    <Compile Include="Assets\_Scripts\ObjectPooling.cs" />
+    <Compile Include="Assets\_Scripts\ShotBehavior.cs" />
     <Compile Include="Assets\_Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\_Scripts\ThirdPersonMovement.cs" />
     <Compile Include="Assets\_Scripts\TopDownMovement.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
     <None Include="Assets\HiRezSpaceshipsCreatorFree\Readme.txt" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAdditive.shader" />
+    <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
