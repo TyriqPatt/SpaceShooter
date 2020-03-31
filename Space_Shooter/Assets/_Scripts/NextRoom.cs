@@ -7,6 +7,7 @@ public class NextRoom : MonoBehaviour
 
     public GameObject[] Rooms;
     public Transform Spawn;
+    public float DoorNum;
 
 
     // Start is called before the first frame update
@@ -23,7 +24,29 @@ public class NextRoom : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        int ranNum = Random.Range(0, Rooms.Length);
-        Instantiate(Rooms[ranNum], Spawn.position, transform.rotation);
+        if(other.transform.tag == "Player")
+        {
+            int ranNum = Random.Range(0, Rooms.Length);
+            GameObject _nextRoom;
+            _nextRoom = Instantiate(Rooms[ranNum], Spawn.position, Spawn.rotation);
+            if(DoorNum == 1)
+            {
+                _nextRoom.GetComponent<RoomManager>().RoomState = RoomManager.State.DisableDoor4;
+            }
+            else if (DoorNum == 2)
+            {
+                _nextRoom.GetComponent<RoomManager>().RoomState = RoomManager.State.DisableDoor3;
+            }
+            else if (DoorNum == 3)
+            {
+                _nextRoom.GetComponent<RoomManager>().RoomState = RoomManager.State.DisableDoor2;
+            }
+            else if (DoorNum == 4)
+            {
+                _nextRoom.GetComponent<RoomManager>().RoomState = RoomManager.State.DisableDoor;
+            }
+            
+            gameObject.SetActive(false);
+        }
     }
 }

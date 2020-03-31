@@ -21,6 +21,8 @@ public class ObjectPooling : MonoBehaviour
 
     //prefab that will be pooled
     public GameObject PooledObject;
+    //Hold player bullets
+    public GameObject BulletContainer;
     //initial amount of objects spawned 
     public int ObjectsSpawned = 20;
     //List to hold pooled objects
@@ -37,7 +39,7 @@ public class ObjectPooling : MonoBehaviour
         for (int i = 0; i < ObjectsSpawned; i++)
         {
             GameObject objects = Instantiate(PooledObject, Vector3.zero, Quaternion.identity) as GameObject;
-            objects.transform.parent = this.transform;
+            objects.transform.parent = BulletContainer.transform;
             objects.SetActive(false);
             ObjectList.Add(objects);
         }

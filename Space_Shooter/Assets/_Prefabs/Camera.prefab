@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  Height: 20
+  Height: 30
   Distance: 20
   Angle: 0
   smoothSpeed: 2
