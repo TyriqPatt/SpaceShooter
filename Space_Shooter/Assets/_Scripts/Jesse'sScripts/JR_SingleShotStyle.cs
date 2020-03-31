@@ -12,6 +12,7 @@ public class JR_SingleShotStyle : MonoBehaviour
 
     public GameObject BasicProjectile;
     public GameObject TrackingProjectile;
+    public GameObject SwirlProjectile;
 
     private GameObject CurrentBullet; 
 
@@ -29,6 +30,10 @@ public class JR_SingleShotStyle : MonoBehaviour
 
         switch (BulletType)
         {
+            case 3:
+                CurrentBullet = SwirlProjectile;
+                print("Swirl");
+                break;
             case 2:
                 CurrentBullet = TrackingProjectile;
                 print("Tracking");

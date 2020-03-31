@@ -10,13 +10,17 @@ public class JR_SpreadStyle : MonoBehaviour
 
 
     public GameObject BasicProjectile;
+    public GameObject TrackingProjectile;
+    public GameObject SwirlProjectile;
 
+    private GameObject CurrentBullet;
 
 
     private Transform barrel;
     private Transform barrelTwo;
     private Transform barrelThree;
-   
+
+    public int BulletType = 1;
 
 
 
@@ -27,8 +31,29 @@ public class JR_SpreadStyle : MonoBehaviour
         barrel = gameObject.transform.GetChild(0).transform;
         barrelTwo = gameObject.transform.GetChild(1).transform;
         barrelThree = gameObject.transform.GetChild(2).transform;
-      
+
+        switch (BulletType)
+        {
+            case 3:
+                CurrentBullet = SwirlProjectile;
+                print("Swirl");
+                break;
+            case 2:
+                CurrentBullet = TrackingProjectile;
+                print("Tracking");
+                break;
+            case 1:
+                CurrentBullet = BasicProjectile;
+
+                print("Basic");
+                break;
+            default:
+                print("No Bullet");
+                break;
+        }
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -37,9 +62,9 @@ public class JR_SpreadStyle : MonoBehaviour
 
         if (fireRate <= 0)
         {
-            Instantiate(BasicProjectile, barrel.position, barrel.rotation);
-            Instantiate(BasicProjectile, barrelTwo.position, barrelTwo.rotation);
-            Instantiate(BasicProjectile, barrelThree.position, barrelThree.rotation);
+            Instantiate(CurrentBullet, barrel.position, barrel.rotation);
+            Instantiate(CurrentBullet, barrelTwo.position, barrelTwo.rotation);
+            Instantiate(CurrentBullet, barrelThree.position, barrelThree.rotation);
            
 
             fireRate = startTime;

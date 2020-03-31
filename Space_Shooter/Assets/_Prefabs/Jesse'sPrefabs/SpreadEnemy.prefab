@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7506750210041340495}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 11.35, y: 0, z: 6.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -127,6 +127,11 @@ MonoBehaviour:
   fireRate: 2
   BasicProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
     type: 3}
+  TrackingProjectile: {fileID: 5248965819378627799, guid: 98574cfdfb8171841ad51176b10fe59a,
+    type: 3}
+  SwirlProjectile: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+    type: 3}
+  BulletType: 3
 --- !u!1 &8355065100029652270
 GameObject:
   m_ObjectHideFlags: 0
