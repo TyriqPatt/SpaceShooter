@@ -5,25 +5,31 @@ using UnityEngine;
 public class JR_BasicProjectileMovement : MonoBehaviour
 {
 
-    public float projectileSpeed; 
+    public float speed;
+    public float Lifetime;
+    float LifeCounter;
+    public GameObject W_impact;
 
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
-        Destroy(gameObject, 8);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.position += transform.forward * Time.deltaTime * speed;
+        LifeCounter += Time.deltaTime;
+        if (LifeCounter >= Lifetime)
+        {
+            gameObject.SetActive(false);
+        }
 
-        transform.Translate(Vector3.forward * projectileSpeed);  
-        
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnDisable()
     {
-        Destroy(gameObject); 
+        LifeCounter = 0;
     }
 }

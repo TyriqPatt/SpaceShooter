@@ -4,61 +4,57 @@ using UnityEngine;
 
 public class JR_SingleShotStyle : MonoBehaviour
 {
+  
+    private Transform barrel;
 
-    public float fireRate;
-    private float startTime; 
-    private bool canShoot;
-    
+    public float Firerate = 4f;
+    public float nextTimeToFire = 0f;
 
-    public GameObject BasicProjectile;
-    public GameObject TrackingProjectile;
-    public GameObject SwirlProjectile;
+    private Vector3 target;
+    private GameObject player;
 
-    private GameObject CurrentBullet; 
-
-    public int BulletType = 1;
-
-    private Transform barrel; 
-
-    
+    //JR_EnemyObjectPooling m_enemyOjectPooling; 
 
     // Start is called before the first frame update
     void Start()
     {
-        startTime = fireRate;
         barrel = gameObject.transform.GetChild(0).transform;
-
-        switch (BulletType)
-        {
-            case 3:
-                CurrentBullet = SwirlProjectile;
-                print("Swirl");
-                break;
-            case 2:
-                CurrentBullet = TrackingProjectile;
-                print("Tracking");
-                break;
-            case 1:
-                CurrentBullet = BasicProjectile;
-
-                print("Basic");
-                break;
-            default:
-                print("No Bullet");
-                break;
-        }
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        fireRate -= Time.deltaTime;
-
-        if (fireRate <= 0)
+        nextTimeToFire += Time.deltaTime; 
+        if (Time.timeScale != 0)
         {
-            Instantiate(CurrentBullet, barrel.position, barrel.rotation);
-            fireRate = startTime; 
+
+            if (nextTimeToFire >= Firerate)
+            {
+                SingleFire();
+
+            }
         }
+    }
+
+    void SingleFire()
+    {
+        for (int i = 0; i < JR_EnemyObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            if (JR_EnemyObjectPooling.Instance.ObjectList[i].activeInHierarchy == false)
+            {
+                JR_EnemyObjectPooling.Instance.ObjectList[i].SetActive(true);
+                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.position = barrel.transform.position;
+                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.rotation = barrel.transform.rotation;
+
+                break;
+            }
+        }
+        nextTimeToFire = 0;
+
+        target = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+
+        transform.LookAt(target);
     }
 }

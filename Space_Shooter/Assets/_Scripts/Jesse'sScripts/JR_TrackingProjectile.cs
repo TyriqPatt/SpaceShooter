@@ -4,41 +4,34 @@ using UnityEngine;
 
 public class JR_TrackingProjectile : MonoBehaviour
 {
-    public float projectileSpeed;
-    private float distance;
+    public float speed;
+    public float Lifetime;
+    float LifeCounter;
+    public GameObject W_impact;
 
-    private bool stopTracking;
-    private GameObject target;  
+    private Vector3 target; 
 
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
-        Destroy(gameObject, 8);
+        target = GameObject.FindGameObjectWithTag("Player").transform.position; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!stopTracking)
+        transform.LookAt(target); 
+        transform.position += transform.forward * Time.deltaTime * speed;
+        LifeCounter += Time.deltaTime;
+        if (LifeCounter >= Lifetime)
         {
-            transform.LookAt(target.transform);
+            gameObject.SetActive(false);
         }
 
-        transform.Translate(Vector3.forward * projectileSpeed);
-        distance = Vector3.Distance(transform.position, target.transform.position);
-        
-        if(distance < 10) 
-        {
-            stopTracking = true; 
-        }
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnDisable()
     {
-        Debug.Log("Hit");
-
-        Destroy(gameObject);
+        LifeCounter = 0;
     }
 }

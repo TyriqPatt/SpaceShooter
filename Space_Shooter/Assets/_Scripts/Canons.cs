@@ -46,10 +46,7 @@ public class Canons : MonoBehaviour
             }
         }
 
-        //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
-        //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
-        //Rightps.Play();
-        //Leftps.Play();
+     
     }
 
     void DuelFire()
@@ -71,11 +68,6 @@ public class Canons : MonoBehaviour
                 break;
             }
         }
-
-        //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
-        //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
-        //Rightps.Play();
-        //Leftps.Play();
     }
 
     void shoot2()

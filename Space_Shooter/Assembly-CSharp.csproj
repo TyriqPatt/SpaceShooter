@@ -67,7 +67,9 @@
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_BasicProjectileMovement.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_DisperseStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyHealth.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyLookAtPlayer.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyMovement.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyObjectPooling.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_RotateAround.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SingleShotStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SpreadStyle.cs" />

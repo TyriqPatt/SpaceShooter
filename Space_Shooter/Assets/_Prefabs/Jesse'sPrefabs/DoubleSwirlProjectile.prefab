@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bac1f7a2db4f7b43b9ee2cd93f51a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 0.1
+  speed: 10
+  Lifetime: 3
+  W_impact: {fileID: 0}
 --- !u!95 &4064680009913567490
 Animator:
   serializedVersion: 3

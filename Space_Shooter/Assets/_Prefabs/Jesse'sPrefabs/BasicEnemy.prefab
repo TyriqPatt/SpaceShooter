@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &473415596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473415597}
+  m_Layer: 0
+  m_Name: EnemyBasicBullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473415597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473415596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 871650887593116138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596709623
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,11 +54,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596709623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.42}
+  m_LocalPosition: {x: 0, y: 0, z: 1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 871650887593116138}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &871650887593116134
 GameObject:
@@ -43,6 +73,7 @@ GameObject:
   - component: {fileID: 871650887593116136}
   - component: {fileID: 871650887593116135}
   - component: {fileID: 7874946737351338351}
+  - component: {fileID: 649232748}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -61,6 +92,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 473415597}
   - {fileID: 596709624}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -135,11 +167,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7f52ce21d42724abace49e70b9417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2
   BasicProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
     type: 3}
   TrackingProjectile: {fileID: 5248965819378627799, guid: 98574cfdfb8171841ad51176b10fe59a,
     type: 3}
   SwirlProjectile: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
     type: 3}
-  BulletType: 3
+  BulletType: 1
+  Firerate: 3
+  nextTimeToFire: 0
+--- !u!114 &649232748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871650887593116134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66976495ee8c0e445a13c8a3723bbd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBullet: {fileID: 0}
+  BulletContainer: {fileID: 473415596}
+  ObjectsSpawned: 10
+  ObjectList: []
