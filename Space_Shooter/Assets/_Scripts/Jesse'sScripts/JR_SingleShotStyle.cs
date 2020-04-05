@@ -5,21 +5,19 @@ using UnityEngine;
 public class JR_SingleShotStyle : MonoBehaviour
 {
   
-    private Transform barrel;
+    public Transform barrel;
 
     public float Firerate = 4f;
     public float nextTimeToFire = 0f;
 
-    private Vector3 target;
-    private GameObject player;
+    
 
     //JR_EnemyObjectPooling m_enemyOjectPooling; 
 
     // Start is called before the first frame update
     void Start()
     {
-        barrel = gameObject.transform.GetChild(0).transform;
-        player = GameObject.FindGameObjectWithTag("Player");
+        //barrel = gameObject.transform.GetChild(0).transform;
 
     }
 
@@ -53,8 +51,6 @@ public class JR_SingleShotStyle : MonoBehaviour
         }
         nextTimeToFire = 0;
 
-        target = new Vector3(player.transform.position.x, 0, player.transform.position.z);
-
-        transform.LookAt(target);
+      
     }
 }

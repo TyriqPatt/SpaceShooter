@@ -369,35 +369,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7874946737351338351, guid: 43b48d8cc0145404582df9362f4350ea,
-        type: 3}
-      propertyPath: Firerate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 649232748, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
-      propertyPath: currentBullet
-      value: 
-      objectReference: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
-        type: 3}
-    - target: {fileID: 649232748, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
-      propertyPath: BasicProjectile
-      value: 
-      objectReference: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
-        type: 3}
-    - target: {fileID: 649232748, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
-      propertyPath: SwirlProjectile
-      value: 
-      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
-        type: 3}
-    - target: {fileID: 649232748, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
-      propertyPath: TrackingProjectile
-      value: 
-      objectReference: {fileID: 5248965819378627799, guid: 98574cfdfb8171841ad51176b10fe59a,
-        type: 3}
-    - target: {fileID: 649232748, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
-      propertyPath: BulletType
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43b48d8cc0145404582df9362f4350ea, type: 3}
 --- !u!1001 &1734389445
