@@ -167,13 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7f52ce21d42724abace49e70b9417e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
-    type: 3}
-  TrackingProjectile: {fileID: 5248965819378627799, guid: 98574cfdfb8171841ad51176b10fe59a,
-    type: 3}
-  SwirlProjectile: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
-    type: 3}
-  BulletType: 1
   Firerate: 3
   nextTimeToFire: 0
 --- !u!114 &649232748
@@ -192,3 +185,7 @@ MonoBehaviour:
   BulletContainer: {fileID: 473415596}
   ObjectsSpawned: 10
   ObjectList: []
+  BulletType: 1
+  BasicProjectile: {fileID: 0}
+  TrackingProjectile: {fileID: 0}
+  SwirlProjectile: {fileID: 0}

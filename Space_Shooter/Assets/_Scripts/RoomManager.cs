@@ -5,35 +5,79 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
 
-    public GameObject Door, Door2, Door3, Door4;
-    public enum State { DisableNothing ,DisableDoor, DisableDoor2, DisableDoor3, DisableDoor4 }
+    public int openingDirection;
+    //1 = need bottom door
+    //2 = need top door
+    //3 = need left door
+    //4 = need right door
 
-    public State RoomState;
+    RoomTemplates templates;
+    int rand;
+    bool spawned = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public float waitTime = 4;
+
+    private void Start()
     {
-        switch (RoomState)
-        {
-            case State.DisableDoor:
-                Door.SetActive(false);
-                break;
-            case State.DisableDoor2:
-                Door2.SetActive(false);
-                break;
-            case State.DisableDoor3:
-                Door3.SetActive(false);
-                break;
-            case State.DisableDoor4:
-                Door4.SetActive(false);
-                break;
+        Destroy(gameObject, waitTime);
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        Invoke("SpawnRooms", 0.1f);
+    }
 
+
+    private void SpawnRooms()
+    {
+        if (!spawned)
+        {
+            if (openingDirection == 1)
+            {
+                //spawn room with bottom door
+                rand = Random.Range(0, templates.bottomRooms.Length);
+                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+            }
+            else if (openingDirection == 2)
+            {
+                //spawn room with top door
+                rand = Random.Range(0, templates.topRooms.Length);
+                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+            }
+            else if (openingDirection == 3)
+            {
+                //spawn room with left door
+                rand = Random.Range(0, templates.leftRooms.Length);
+                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+            }
+            else if (openingDirection == 4)
+            {
+                //spawn room with right door
+                rand = Random.Range(0, templates.rightRooms.Length);
+                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+            }
+            spawned = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("SpawnPoint"))
+        {
+            if (other.gameObject.name != "Destroyer")
+            {
+                if (other.GetComponent<RoomManager>().spawned == false && spawned == false)
+                {
+                    //spawn walls blocking off and openings
+
+                    Instantiate(templates.closedRoom, transform.position, templates.closedRoom.transform.rotation);
+                    Destroy(gameObject);
+
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            spawned = true;
+        }
     }
+
 }
