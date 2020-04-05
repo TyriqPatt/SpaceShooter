@@ -66,7 +66,6 @@ public class RoomManager : MonoBehaviour
                 if (other.GetComponent<RoomManager>().spawned == false && spawned == false)
                 {
                     //spawn walls blocking off and openings
-
                     Instantiate(templates.closedRoom, transform.position, templates.closedRoom.transform.rotation);
                     Destroy(gameObject);
 
