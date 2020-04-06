@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 8918149584983668763}
   - component: {fileID: 8918149584983668760}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 8918149585750483872}
   - component: {fileID: 8918149585750483873}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 8918149586690832888}
   - component: {fileID: 8918149586690832889}
   m_Layer: 0
-  m_Name: Wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -590,9 +590,10 @@ GameObject:
   - component: {fileID: 8918149586733610492}
   - component: {fileID: 8918149586733610493}
   - component: {fileID: -3821530569600711188}
+  - component: {fileID: 6525392298509984580}
   m_Layer: 0
   m_Name: B
-  m_TagString: Untagged
+  m_TagString: EnterRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -675,6 +676,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab19dc4b0b951b7499c12e2b58d20dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6525392298509984580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8918149586733610490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 89, y: 5, z: 49}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &8918149586758988052
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +702,7 @@ GameObject:
   - component: {fileID: 8918149586758988057}
   - component: {fileID: 8918149586758988054}
   m_Layer: 0
-  m_Name: Wall (7)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

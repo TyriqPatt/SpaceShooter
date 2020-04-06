@@ -9,7 +9,8 @@ public class TopDownMovement : MonoBehaviour
     public float rotSpeed = 7f;
     public GameObject PlayerObj;
     Rigidbody Rig;
-    Vector3 movement;
+    public Vector3 movement;
+    public float ForwardDis;
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +41,84 @@ public class TopDownMovement : MonoBehaviour
 
     private void LateUpdate()
     {
+        WallDectection();
         Move();
     }
 
     private void Move()
     {
         Rig.MovePosition(Rig.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    void WallDectection()
+    {
+        if(movement.z == 1)
+        {
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+            {
+                if(hit.transform.name == "Wall")
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                }
+            }
+            if(hit.distance <= 2 && hit.transform.name == "Wall")
+            {
+                movement.z = 0;
+            }
+        }
+
+        if (movement.z == -1)
+        {
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
+            {
+                if (hit.transform.name == "Wall")
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.yellow);
+                }
+            }
+            if (hit.distance <= 2 && hit.transform.name == "Wall")
+            {
+                movement.z = 0;
+            }
+        }
+
+        if (movement.x == 1)
+        {
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity))
+            {
+                if (hit.transform.name == "Wall")
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
+                }
+            }
+            if (hit.distance <= 2 && hit.transform.name == "Wall")
+            {
+                movement.x = 0;
+            }
+        }
+
+        if (movement.x == -1)
+        {
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, Mathf.Infinity))
+            {
+                if (hit.transform.name == "Wall")
+                {
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.yellow);
+                }
+            }
+            if (hit.distance <= 2 && hit.transform.name == "Wall")
+            {
+                movement.x = 0;
+            }
+        }
+        
     }
 }

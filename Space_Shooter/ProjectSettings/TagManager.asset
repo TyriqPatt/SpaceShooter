@@ -7,6 +7,7 @@ TagManager:
   - SpawnPoint
   - Rooms
   - SecretRoom
+  - EnterRoom
   layers:
   - Default
   - TransparentFX

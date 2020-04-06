@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 327006348411931683}
   - component: {fileID: 327006348411931684}
   m_Layer: 0
-  m_Name: Wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 327006348447884406}
   - component: {fileID: 327006348447884407}
   m_Layer: 0
-  m_Name: Wall (7)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,9 +317,10 @@ GameObject:
   - component: {fileID: 327006348628804960}
   - component: {fileID: 327006348628804961}
   - component: {fileID: 7877528252410975900}
+  - component: {fileID: 287877460124580136}
   m_Layer: 0
   m_Name: LR
-  m_TagString: Untagged
+  m_TagString: EnterRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,6 +405,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab19dc4b0b951b7499c12e2b58d20dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &287877460124580136
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327006348628804962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 89, y: 5, z: 49}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &327006348877232993
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +431,7 @@ GameObject:
   - component: {fileID: 327006348877233006}
   - component: {fileID: 327006348877233007}
   m_Layer: 0
-  m_Name: Wall (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -508,7 +522,7 @@ GameObject:
   - component: {fileID: 327006348899128430}
   - component: {fileID: 327006348899128431}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,7 +827,7 @@ GameObject:
   - component: {fileID: 327006350003263929}
   - component: {fileID: 327006350003263930}
   m_Layer: 0
-  m_Name: Wall (5)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -904,7 +918,7 @@ GameObject:
   - component: {fileID: 327006350210910858}
   - component: {fileID: 327006350210910859}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

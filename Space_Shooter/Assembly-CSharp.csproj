@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\AddRooms.cs" />
+    <Compile Include="Assets\_Scripts\AdjustCamera.cs" />
     <Compile Include="Assets\_Scripts\Canons.cs" />
     <Compile Include="Assets\_Scripts\Destroyer.cs" />
     <Compile Include="Assets\_Scripts\Isometric_Cam.cs" />

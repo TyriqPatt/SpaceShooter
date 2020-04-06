@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3046774917216035483}
   - component: {fileID: 3046774917216035482}
   m_Layer: 0
-  m_Name: Wall (6)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 3046774917543676632}
   - component: {fileID: 3046774917543676647}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 3046774918160094616}
   - component: {fileID: 3046774918160094631}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -376,9 +376,10 @@ GameObject:
   - component: {fileID: 3046774918353797694}
   - component: {fileID: 3046774918353797693}
   - component: {fileID: -16341655142759920}
+  - component: {fileID: 4580545948263132616}
   m_Layer: 0
   m_Name: T
-  m_TagString: Untagged
+  m_TagString: EnterRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,6 +462,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab19dc4b0b951b7499c12e2b58d20dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4580545948263132616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046774918353797692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 89, y: 5, z: 49}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &3046774918712119612
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +488,7 @@ GameObject:
   - component: {fileID: 3046774918712119615}
   - component: {fileID: 3046774918712119614}
   m_Layer: 0
-  m_Name: Wall (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +579,7 @@ GameObject:
   - component: {fileID: 3046774918940341102}
   - component: {fileID: 3046774918940341101}
   m_Layer: 0
-  m_Name: Wall (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
