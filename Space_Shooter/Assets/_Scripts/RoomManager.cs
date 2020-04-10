@@ -19,15 +19,17 @@ public class RoomManager : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, waitTime);
+        //Destroy(gameObject, waitTime);
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("SpawnRooms", 0.1f);
+        StartCoroutine(SpawnRooms());
     }
 
 
-    private void SpawnRooms()
+    private IEnumerator SpawnRooms()
     {
-        if (!spawned)
+        
+        yield return new WaitForSeconds(1);
+        if (!RoomTemplates.spawned)
         {
             if (openingDirection == 1)
             {
@@ -53,7 +55,7 @@ public class RoomManager : MonoBehaviour
                 rand = Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
-            spawned = true;
+            gameObject.SetActive(false);
         }
     }
 
@@ -61,22 +63,27 @@ public class RoomManager : MonoBehaviour
     {
         if (other.CompareTag("SpawnPoint"))
         {
-            if (other.gameObject.name != "Destroyer")
-            {
-                if (other.GetComponent<RoomManager>().spawned == false && spawned == false)
-                {
-                    //spawn walls blocking off and openings
+            //if (other.gameObject.name != "Destroyer")
+            //{
+            //    if (other.GetComponent<RoomManager>().spawned == false && spawned == false)
+            //    {
+            //        //spawn walls blocking off and openings
 
-                    Instantiate(templates.closedRoom, transform.position, templates.closedRoom.transform.rotation);
-                    Destroy(gameObject);
+            //        Instantiate(templates.closedRoom, transform.position, templates.closedRoom.transform.rotation);
+            //        Destroy(gameObject);
 
-                }
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-            spawned = true;
+            //    }
+            //}
+            //else
+            //{
+            //    StopAllCoroutines();
+            //    Destroy(gameObject);
+            //}
+            //spawned = true;
+        }
+        if (other.CompareTag("EnterRoom"))
+        {
+            StopAllCoroutines();
         }
     }
 

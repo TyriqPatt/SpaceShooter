@@ -203,80 +203,6 @@ Transform:
   m_Father: {fileID: 2112907905}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &358120484
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_Name
-      value: EntryRoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101268413128, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7235792101978102964, guid: ec0fe5dc4bfc07a45b3920ca14e897e4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5d950b40f4ef06c438ae0d95f743209a, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
 --- !u!1 &422493788
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,11 +319,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776592470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.741634, y: 102.73393, z: -99.7554}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1776592472
 MonoBehaviour:
@@ -412,28 +338,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottomRooms:
-  - {fileID: 8918149586733610490, guid: ad7d10c1c39821a45911493f0708c57a, type: 3}
+  - {fileID: 7362715978387316101, guid: 40fc38faf2fdff64db640907bc89d132, type: 3}
   - {fileID: 1924463443043734679, guid: 41d0b5f451bbc834581bfaa8d83c2f12, type: 3}
   - {fileID: 2128219805466829280, guid: 04673ea7f26fd0d4fa2f7e4fd894f16a, type: 3}
-  - {fileID: 7362715978387316101, guid: 40fc38faf2fdff64db640907bc89d132, type: 3}
+  - {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
   topRooms:
-  - {fileID: 3046774918353797692, guid: a802fb1200db66c4d810998054336e0d, type: 3}
+  - {fileID: 6400078892085451805, guid: 94e13011c51f3c147bb75bb5c68bb5ef, type: 3}
   - {fileID: 8338077852538063146, guid: 75136745ccdc87d469330c31b63485f9, type: 3}
   - {fileID: 7362715978387316101, guid: 40fc38faf2fdff64db640907bc89d132, type: 3}
-  - {fileID: 6400078892085451805, guid: 94e13011c51f3c147bb75bb5c68bb5ef, type: 3}
+  - {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
   leftRooms:
   - {fileID: 8338077852538063146, guid: 75136745ccdc87d469330c31b63485f9, type: 3}
-  - {fileID: 6614939559667811072, guid: 9a2d1c370ee1a8f45bb4618521e43186, type: 3}
-  - {fileID: 1924463443043734679, guid: 41d0b5f451bbc834581bfaa8d83c2f12, type: 3}
   - {fileID: 327006348628804962, guid: f594ddb6c4106d24f958f9794f7cc81f, type: 3}
+  - {fileID: 1924463443043734679, guid: 41d0b5f451bbc834581bfaa8d83c2f12, type: 3}
+  - {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
   rightRooms:
-  - {fileID: 2469372279764771962, guid: 0b2df3cb504186c45b70cfe89b5c5776, type: 3}
+  - {fileID: 327006348628804962, guid: f594ddb6c4106d24f958f9794f7cc81f, type: 3}
   - {fileID: 2128219805466829280, guid: 04673ea7f26fd0d4fa2f7e4fd894f16a, type: 3}
   - {fileID: 6400078892085451805, guid: 94e13011c51f3c147bb75bb5c68bb5ef, type: 3}
-  - {fileID: 327006348628804962, guid: f594ddb6c4106d24f958f9794f7cc81f, type: 3}
+  - {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
+  TDeadEnd: {fileID: 8918149586733610490, guid: ad7d10c1c39821a45911493f0708c57a,
+    type: 3}
+  BDeadEnd: {fileID: 3046774918353797692, guid: a802fb1200db66c4d810998054336e0d,
+    type: 3}
+  RDeadEnd: {fileID: 6614939559667811072, guid: 9a2d1c370ee1a8f45bb4618521e43186,
+    type: 3}
+  LDeadEnd: {fileID: 2469372279764771962, guid: 0b2df3cb504186c45b70cfe89b5c5776,
+    type: 3}
   closedRoom: {fileID: 9081274322769698657, guid: 9c8138f1d10201d499a887eb826f0d75,
     type: 3}
   rooms: []
+  SpawnPoints: []
   waitTime: 2
 --- !u!1 &2112907903
 GameObject:

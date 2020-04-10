@@ -16,8 +16,8 @@ public class Destroyer : MonoBehaviour
     {
         if (other.CompareTag("SecretRoom"))
         {
-            templates.rooms.Remove(other.transform.parent.gameObject);
-            Destroy(other.transform.parent.gameObject);
+            //templates.rooms.Remove(other.transform.parent.gameObject);
+            //Destroy(other.transform.parent.gameObject);
         }
         
     }
