@@ -24,10 +24,14 @@ public class RoomManager : MonoBehaviour
         StartCoroutine(SpawnRooms());
     }
 
+    private void Update()
+    {
+        WallDectection();
+    }
+
 
     private IEnumerator SpawnRooms()
     {
-        
         yield return new WaitForSeconds(1);
         if (!RoomTemplates.spawned)
         {
@@ -81,10 +85,73 @@ public class RoomManager : MonoBehaviour
             //}
             //spawned = true;
         }
-        if (other.CompareTag("EnterRoom"))
+        if (other.CompareTag("EnterRoom") || other.CompareTag("SpawnPoint"))
         {
             StopAllCoroutines();
+            //Instantiate(templates.FourWay, transform.position, templates.FourWay.transform.rotation);
         }
     }
 
+    void WallDectection()
+    {
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            if (hit.transform.name == "Wall")
+            {
+                
+            }
+        }
+        //if (hit.transform.name == "Wall")
+        //{
+
+        //}
+
+        RaycastHit hit2;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit2, Mathf.Infinity))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit2.distance, Color.yellow);
+            if (hit2.transform.name == "Wall")
+            {
+                
+            }
+        }
+        //if (hit2.transform.name == "Wall")
+        //{
+
+        //}
+
+        RaycastHit hit3;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit3, Mathf.Infinity))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit3.distance, Color.yellow);
+            if (hit3.transform.name == "Wall")
+            {
+                
+            }
+        }
+        //if (hit3.transform.name == "Wall")
+        //{
+
+        //}
+
+        RaycastHit hit4;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit4, Mathf.Infinity))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit4.distance, Color.yellow);
+            if (hit4.transform.name == "Wall")
+            {
+                
+            }
+        }
+        //if (hit4.transform.name == "Wall")
+        //{
+
+        //}
+    }
 }

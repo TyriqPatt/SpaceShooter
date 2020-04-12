@@ -365,6 +365,7 @@ MonoBehaviour:
     type: 3}
   LDeadEnd: {fileID: 2469372279764771962, guid: 0b2df3cb504186c45b70cfe89b5c5776,
     type: 3}
+  FourWay: {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
   closedRoom: {fileID: 9081274322769698657, guid: 9c8138f1d10201d499a887eb826f0d75,
     type: 3}
   rooms: []

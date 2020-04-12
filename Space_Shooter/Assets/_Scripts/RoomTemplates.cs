@@ -13,6 +13,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject BDeadEnd;
     public GameObject RDeadEnd;
     public GameObject LDeadEnd;
+    public GameObject FourWay;
 
     public GameObject closedRoom;
 
