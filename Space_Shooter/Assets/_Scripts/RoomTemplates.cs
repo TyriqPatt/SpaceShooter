@@ -9,26 +9,19 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] topRooms;
     public GameObject[] leftRooms;
     public GameObject[] rightRooms;
-    public GameObject TDeadEnd;
-    public GameObject BDeadEnd;
-    public GameObject RDeadEnd;
-    public GameObject LDeadEnd;
-    public GameObject FourWay;
 
     public GameObject closedRoom;
 
     public List<GameObject> rooms;
-    public List<GameObject> SpawnPoints;
 
     public float waitTime;
     bool spawnedBoss;
     GameObject Boss;
-    public static bool spawned;
+    public static bool DoneSpawning;
 
     private void Start()
     {
         int rand = Random.Range(0, 4);
-        
         if(rand == 0)
         {
             int rand2 = Random.Range(0, bottomRooms.Length);
@@ -49,30 +42,16 @@ public class RoomTemplates : MonoBehaviour
             int rand2 = Random.Range(0, leftRooms.Length);
             Instantiate(leftRooms[rand2], Vector3.zero, leftRooms[rand2].transform.rotation);
         }
-        
     }
 
     private void Update()
     {
-        if(rooms.Count >= 20)
+        if (!DoneSpawning)
         {
-            spawned = true;
+            if (rooms.Count >= 20)
+            {
+                DoneSpawning = true;
+            }
         }
-        //if(waitTime <= 0 && !spawnedBoss)
-        //{
-        //    for(int i = 0; i < rooms.Count; i++)
-        //    {
-        //        if(i == rooms.Count - 1)
-        //        {
-        //            rooms[i].transform.GetChild(0).GetComponent<MeshRenderer>().material.color = Color.red;
-        //            //Instantiate(Boss, rooms[i].transform.position, Quaternion.identity);
-        //            spawnedBoss = true;
-        //        }
-        //    }
-        //}
-        //else
-        //{
-        //    waitTime -= Time.deltaTime;
-        //}
     }
 }
