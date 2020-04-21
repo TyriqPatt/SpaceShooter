@@ -11,10 +11,10 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] rightRooms;
 
     public GameObject closedRoom;
-
+    public float RoomLimit;
     public List<GameObject> rooms;
 
-    public float waitTime;
+    
     bool spawnedBoss;
     GameObject Boss;
     public static bool DoneSpawning;
@@ -48,7 +48,7 @@ public class RoomTemplates : MonoBehaviour
     {
         if (!DoneSpawning)
         {
-            if (rooms.Count >= 20)
+            if (rooms.Count >= RoomLimit)
             {
                 DoneSpawning = true;
             }

@@ -369,20 +369,10 @@ MonoBehaviour:
   - {fileID: 6085670455178897538, guid: f65fe50b0f9936542ba7992e6172199a, type: 3}
   - {fileID: 8260454972092696454, guid: ac9c40a98037b1247ae2db4ea86347f4, type: 3}
   - {fileID: 4191368262580501131, guid: da611e7263227d14b8db0282d52b970f, type: 3}
-  TDeadEnd: {fileID: 8918149586733610490, guid: ad7d10c1c39821a45911493f0708c57a,
-    type: 3}
-  BDeadEnd: {fileID: 3046774918353797692, guid: a802fb1200db66c4d810998054336e0d,
-    type: 3}
-  RDeadEnd: {fileID: 6614939559667811072, guid: 9a2d1c370ee1a8f45bb4618521e43186,
-    type: 3}
-  LDeadEnd: {fileID: 2469372279764771962, guid: 0b2df3cb504186c45b70cfe89b5c5776,
-    type: 3}
-  FourWay: {fileID: 7235792101268413129, guid: ec0fe5dc4bfc07a45b3920ca14e897e4, type: 3}
   closedRoom: {fileID: 9081274322769698657, guid: 9c8138f1d10201d499a887eb826f0d75,
     type: 3}
+  RoomLimit: 15
   rooms: []
-  SpawnPoints: []
-  waitTime: 2
 --- !u!1 &2112907903
 GameObject:
   m_ObjectHideFlags: 0

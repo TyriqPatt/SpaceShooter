@@ -29,7 +29,7 @@ public class RoomManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (!spawned)
         {
-            if (templates.rooms.Count < 20)
+            if (templates.rooms.Count < templates.RoomLimit)
             {
                 if (openingDirection == 1)
                 {
