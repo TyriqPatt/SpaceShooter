@@ -28,8 +28,15 @@ public class JR_BasicProjectileMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        gameObject.SetActive(false);
+
+    }
+
     private void OnDisable()
     {
         LifeCounter = 0;
+        Instantiate(W_impact, transform.position, transform.rotation); 
     }
 }

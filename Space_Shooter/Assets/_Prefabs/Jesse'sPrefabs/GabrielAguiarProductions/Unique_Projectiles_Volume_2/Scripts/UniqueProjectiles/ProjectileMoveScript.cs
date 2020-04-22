@@ -14,6 +14,7 @@ using UnityEngine;
 
 public class ProjectileMoveScript : MonoBehaviour {
 
+    private float timer; 
     public bool rotate = false;
     public float rotateAmount = 45;
     public bool bounce = false;
@@ -77,14 +78,25 @@ public class ProjectileMoveScript : MonoBehaviour {
 			GetComponent<AudioSource> ().PlayOneShot (shotSFX);
 		}
 	}
+    private void Update()
+    {
+        timer += Time.deltaTime; 
+        if(timer >= 5)
+        {
+            gameObject.SetActive(false);
+            timer = 0; 
+        }
+    }
 
-	void FixedUpdate () {
+    void FixedUpdate () {
         if (target != null)
             rotateToMouse.RotateToMouse (gameObject, target.transform.position);
         if (rotate)
             transform.Rotate(0, 0, rotateAmount, Space.Self);
         if (speed != 0 && rb != null)
 			rb.position += (transform.forward + offset) * (speed * Time.deltaTime);   
+
+
     }
 
 	void OnCollisionEnter (Collision co) {
@@ -128,10 +140,10 @@ public class ProjectileMoveScript : MonoBehaviour {
                     if (ps == null)
                     {
                         var psChild = hitVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
-                        Destroy(hitVFX, psChild.main.duration);
+                        hitVFX.SetActive(false);  
                     }
                     else
-                        Destroy(hitVFX, ps.main.duration);
+                        hitVFX.SetActive(false);
                 }
 
                 StartCoroutine(DestroyParticle(0f));

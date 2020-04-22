@@ -32,7 +32,7 @@ public class JR_EnemyObjectPooling : MonoBehaviour
 
     public int BulletType = 1;
 
-    public GameObject BasicProjectile;
+    public GameObject FireProjectile;
     public GameObject TrackingProjectile;
     public GameObject SwirlProjectile;
 
@@ -52,7 +52,7 @@ public class JR_EnemyObjectPooling : MonoBehaviour
                 print("Tracking");
                 break;
             case 1:
-                currentBullet = BasicProjectile;
+                currentBullet = FireProjectile;
 
                 print("Basic");
                 break;
@@ -60,6 +60,8 @@ public class JR_EnemyObjectPooling : MonoBehaviour
                 print("No Bullet");
                 break;
         }
+
+
     }
 
     //Spawns the objects
@@ -72,5 +74,7 @@ public class JR_EnemyObjectPooling : MonoBehaviour
             objects.SetActive(false);
             ObjectList.Add(objects);
         }
+
+       
     }
 }

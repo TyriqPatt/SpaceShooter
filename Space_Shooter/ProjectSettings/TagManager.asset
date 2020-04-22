@@ -8,6 +8,9 @@ TagManager:
   - Rooms
   - SecretRoom
   - EnterRoom
+  - Bullet
+  - Enemy
+  - EnemyBulletContainer
   layers:
   - Default
   - TransparentFX
