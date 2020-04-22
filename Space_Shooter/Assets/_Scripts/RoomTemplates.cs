@@ -54,4 +54,12 @@ public class RoomTemplates : MonoBehaviour
             }
         }
     }
+
+    public void CheckList()
+    {
+        for (int i = 0; i < rooms.Count; i++)
+        {
+            rooms[i].GetComponent<AddRooms>().NumInlist = i;
+        }
+    }
 }

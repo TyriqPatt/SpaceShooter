@@ -66,6 +66,7 @@ public class RoomManager : MonoBehaviour
             DeadEnd.SetActive(true);
             StopAllCoroutines();
             gameObject.SetActive(false);
+            templates.CheckList();
         }
         else
         {

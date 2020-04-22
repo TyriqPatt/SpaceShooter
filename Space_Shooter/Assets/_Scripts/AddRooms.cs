@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddRooms : MonoBehaviour
 {
@@ -15,12 +16,23 @@ public class AddRooms : MonoBehaviour
     public GameObject RD;
     public GameObject LD;
     public GameObject BD;
+    public GameObject MMObject;
+    public Image MMBackGround;
+    public int NumInlist;
+    BoxCollider BC;
+    public Vector3 BCSize;
+
 
     private void Start()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         templates.rooms.Add(this.gameObject);
         wallup();
+        BC = GetComponent<BoxCollider>();
+        BCSize.x = 85;
+        BCSize.y = 5;
+        BCSize.z = 45;
+        BC.size = BCSize;
     }
 
     public void wallup()
@@ -89,6 +101,31 @@ public class AddRooms : MonoBehaviour
         if (hit4.distance > 44.6 && hit4.distance < 50 && hit4.transform.name == "Wall")
         {
             LDeadend = true;
+        }
+    }
+
+    public void CheckFirstRoomForMM()
+    {
+        if(NumInlist == 0)
+        {
+            MMObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            MMObject.SetActive(true);
+            MMBackGround.color = Color.red;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            MMBackGround.color = Color.white;
         }
     }
 }
