@@ -18,7 +18,7 @@ public class JR_EnemyLookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+        target = new Vector3(player.transform.position.x, gameObject.transform.position.y, player.transform.position.z);
 
         transform.LookAt(target);
 
