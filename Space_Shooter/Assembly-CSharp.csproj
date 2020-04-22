@@ -78,6 +78,7 @@
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SpreadStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SwirlStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_TrackingProjectile.cs" />
+    <Compile Include="Assets\_Scripts\MMCamFollow.cs" />
     <Compile Include="Assets\_Scripts\ObjectPooling.cs" />
     <Compile Include="Assets\_Scripts\RoomManager.cs" />
     <Compile Include="Assets\_Scripts\RoomTemplates.cs" />
