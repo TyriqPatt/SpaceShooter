@@ -454,12 +454,16 @@ MonoBehaviour:
   BulletContainer: {fileID: 1049187917}
   ObjectsSpawned: 10
   ObjectList: []
-  BulletType: 2
+  BulletType: 5
   FireProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
     type: 3}
-  TrackingProjectile: {fileID: 5390579357298907539, guid: ab8ba3d658f6a82468a1580a2252df11,
+  OrbProjectile: {fileID: 5390579357298907539, guid: ab8ba3d658f6a82468a1580a2252df11,
     type: 3}
-  SwirlProjectile: {fileID: 5390579357298907539, guid: eee206e9d2bf70749b999755e84e1d8c,
+  BlackHoleProjectile: {fileID: 5390579357298907539, guid: 02002613d73b2204aa20db3828912c7a,
+    type: 3}
+  LightingProjectile: {fileID: 5390579357298907539, guid: eee206e9d2bf70749b999755e84e1d8c,
+    type: 3}
+  LoopyProjectile: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
     type: 3}
 --- !u!114 &1114747038
 MonoBehaviour:

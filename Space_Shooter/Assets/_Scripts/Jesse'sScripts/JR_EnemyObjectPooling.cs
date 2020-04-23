@@ -33,8 +33,10 @@ public class JR_EnemyObjectPooling : MonoBehaviour
     public int BulletType = 1;
 
     public GameObject FireProjectile;
-    public GameObject TrackingProjectile;
-    public GameObject SwirlProjectile;
+    public GameObject OrbProjectile;
+    public GameObject BlackHoleProjectile;
+    public GameObject LightingProjectile;
+    public GameObject LoopyProjectile;
 
     private void Awake()
     {
@@ -43,18 +45,21 @@ public class JR_EnemyObjectPooling : MonoBehaviour
 
         switch (BulletType)
         {
+            case 5:
+                currentBullet = LoopyProjectile;
+                break;
+            case 4:
+                currentBullet = LightingProjectile;
+                break;
             case 3:
-                currentBullet = SwirlProjectile;
-                print("Swirl");
+                currentBullet = BlackHoleProjectile;
                 break;
             case 2:
-                currentBullet = TrackingProjectile;
-                print("Tracking");
+                currentBullet = OrbProjectile;
                 break;
             case 1:
                 currentBullet = FireProjectile;
 
-                print("Basic");
                 break;
             default:
                 print("No Bullet");
