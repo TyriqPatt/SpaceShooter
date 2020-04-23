@@ -287,13 +287,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422493788}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.95313203, y: -0.041985203, z: 0.25539097, w: 0.15669091}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 161.329, y: -30, z: 0}
 --- !u!1 &516029658
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,12 +454,12 @@ MonoBehaviour:
   BulletContainer: {fileID: 1049187917}
   ObjectsSpawned: 10
   ObjectList: []
-  BulletType: 1
+  BulletType: 2
   FireProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
     type: 3}
-  TrackingProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
+  TrackingProjectile: {fileID: 5390579357298907539, guid: ab8ba3d658f6a82468a1580a2252df11,
     type: 3}
-  SwirlProjectile: {fileID: 5390579357298907539, guid: a4ce9c56fe4cda94698a7a1efa96dceb,
+  SwirlProjectile: {fileID: 5390579357298907539, guid: eee206e9d2bf70749b999755e84e1d8c,
     type: 3}
 --- !u!114 &1114747038
 MonoBehaviour:
