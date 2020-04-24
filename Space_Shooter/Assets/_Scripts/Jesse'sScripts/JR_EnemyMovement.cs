@@ -9,24 +9,35 @@ public class JR_EnemyMovement : MonoBehaviour
     private NavMeshAgent navAgent;
 
     private GameObject player;
-    private float distance;
-
+    public float distance;
+    public float Speed;
+    public GameObject target;
     private Vector3 playerVec;
+
+    private GameObject[] _points;
+
+    private int ranNum;
+
+    public float MoveTimer;
+
+    private float point_distance; 
+
     // Start is called before the first frame update
     void Start()
     {
         navAgent = gameObject.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        playerVec = new Vector3(player.transform.position.x, 0, player.transform.position.z);   
+        playerVec = new Vector3(player.transform.position.x, 0, player.transform.position.z);
 
-      
+        _points = GameObject.FindGameObjectsWithTag("Point");
+        target = _points[3]; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform); 
-
+        MoveTimer -= Time.deltaTime; 
+       
 
         switch (MovementType)
         {
@@ -46,8 +57,36 @@ public class JR_EnemyMovement : MonoBehaviour
 
     private void EnemyMove()
     {
-        GetComponent<NavMeshAgent>().Move(transform.forward * Time.deltaTime);
+        point_distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
 
+
+        if (point_distance > 1)
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+            EnemyLookAt();
+
+        }
+
+
+        if (MoveTimer <= 0)
+        {
+            ranNum = Random.RandomRange(0, 15);
+            target = _points[ranNum];
+
+            MoveTimer = Random.Range(6, 10);
+        }
+
+
+
+
+    }
+
+
+    private void EnemyLookAt()
+    {
+        
+            transform.LookAt(target.transform.position);
+        
     }
 
 
