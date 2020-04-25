@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - EnemyBulletContainer
   - Point
+  - Invincible
   layers:
   - Default
   - TransparentFX
