@@ -5,9 +5,9 @@ using UnityEngine;
 public class DamageValues : MonoBehaviour
 {
 
-    public float BasicBullet;
+    public int BasicBullet;
 
-    public float EnemyBullet;
+    public int EnemyBullet;
 
 
     public static DamageValues _instance;

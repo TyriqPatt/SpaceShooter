@@ -7,6 +7,7 @@ public class ShotBehavior : MonoBehaviour {
     public float Lifetime;
     float LifeCounter;
     public GameObject W_impact;
+    public JR_EnemyHealth Enemy_HP;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +24,16 @@ public class ShotBehavior : MonoBehaviour {
         }
 
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Hit");
+            Enemy_HP = other.GetComponent<JR_EnemyHealth>();
+            Enemy_HP.TakeDamage(DamageValues._instance.BasicBullet);
+        }
+    }
 
     private void OnDisable()
     {
