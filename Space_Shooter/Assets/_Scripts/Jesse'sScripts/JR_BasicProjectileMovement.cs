@@ -37,6 +37,6 @@ public class JR_BasicProjectileMovement : MonoBehaviour
     private void OnDisable()
     {
         LifeCounter = 0;
-        Instantiate(W_impact, transform.position, transform.rotation); 
+       // Instantiate(W_impact, transform.position, transform.rotation); 
     }
 }

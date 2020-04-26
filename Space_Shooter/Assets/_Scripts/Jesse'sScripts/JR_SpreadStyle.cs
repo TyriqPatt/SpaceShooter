@@ -16,13 +16,23 @@ public class JR_SpreadStyle : MonoBehaviour
     public Transform barrelTwo;
     public Transform barrelThree;
 
+    public JR_EneObjectPooler objectPooler;
 
+    public enum State
+    {
+        Fire,
+        Lighting,
+        BlackHole,
+        Double
+    }
+    public State _state;
 
 
     // Start is called before the first frame update
     void Start()
     {
         //barrel = gameObject.transform.GetChild(0).transform;
+        objectPooler = JR_EneObjectPooler.Instance;
 
     }
 
@@ -43,22 +53,50 @@ public class JR_SpreadStyle : MonoBehaviour
 
     void SingleFire()
     {
-        for (int i = 0; i < JR_EnemyObjectPooling.Instance.ObjectList.Count; i++)
+        switch (_state)
         {
-            if (JR_EnemyObjectPooling.Instance.ObjectList[i].activeInHierarchy == false)
-            {
-                JR_EnemyObjectPooling.Instance.ObjectList[i].SetActive(true);
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.position = barrel.transform.position;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.rotation = barrel.transform.rotation;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.position = barrelTwo.transform.position;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.rotation = barrelTwo.transform.rotation;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.position = barrelThree.transform.position;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.rotation = barrelThree.transform.rotation;
-                break;
-            }
+            case State.Fire:
+                {
+                    objectPooler.SpawnFromPool("Fire", barrel.transform.position, barrel.transform.rotation);
+                    objectPooler.SpawnFromPool("Fire", barrelTwo.transform.position, barrelTwo.transform.rotation);
+                    objectPooler.SpawnFromPool("Fire", barrelThree.transform.position, barrelThree.transform.rotation);
+
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.Lighting:
+                {
+                    objectPooler.SpawnFromPool("Lighting", barrel.transform.position, barrel.transform.rotation);
+                    objectPooler.SpawnFromPool("Lighting", barrelTwo.transform.position, barrelTwo.transform.rotation);
+                    objectPooler.SpawnFromPool("Lighting", barrelThree.transform.position, barrelThree.transform.rotation);
+
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.BlackHole:
+                {
+                    objectPooler.SpawnFromPool("BlackHole", barrel.transform.position, barrel.transform.rotation);
+                    objectPooler.SpawnFromPool("BlackHole", barrelTwo.transform.position, barrelTwo.transform.rotation);
+                    objectPooler.SpawnFromPool("BlackHole", barrelThree.transform.position, barrelThree.transform.rotation);
+
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.Double:
+                {
+                    objectPooler.SpawnFromPool("Double", barrel.transform.position, barrel.transform.rotation);
+                    objectPooler.SpawnFromPool("Double", barrelTwo.transform.position, barrelTwo.transform.rotation);
+                    objectPooler.SpawnFromPool("Double", barrelThree.transform.position, barrelThree.transform.rotation);
+
+                    nextTimeToFire = 0;
+                    break;
+                }
         }
-        nextTimeToFire = 0;
+
 
 
     }
+
+
+
 }
