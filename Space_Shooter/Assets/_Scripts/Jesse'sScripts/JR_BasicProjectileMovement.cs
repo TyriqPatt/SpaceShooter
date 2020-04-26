@@ -34,7 +34,7 @@ public class JR_BasicProjectileMovement : MonoBehaviour
         gameObject.SetActive(false);
         if (collision.gameObject.GetComponent<PlayerHealth>())
         {
-            m_playerHealth.DealDamage(10); 
+            m_playerHealth.DealDamage(0.1f);  
         }
 
     }
