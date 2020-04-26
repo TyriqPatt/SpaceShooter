@@ -60,4 +60,44 @@ MonoBehaviour:
     prefab: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
       type: 3}
     size: 20
+  - tag: Frost
+    prefab: {fileID: 5390579357298907539, guid: 461200d0d45a62347a13e7b388b1a148,
+      type: 3}
+    size: 20
+  - tag: RedTrail
+    prefab: {fileID: 5390579357298907539, guid: 9b03d2d5f54d24d45bee2c426eab849e,
+      type: 3}
+    size: 20
+  - tag: BlueTrail
+    prefab: {fileID: 5390579357298907539, guid: b3c9030987acf1745af0afd7ff7639ed,
+      type: 3}
+    size: 20
+  - tag: PurpleTrail
+    prefab: {fileID: 5390579357298907539, guid: 7f2c434169a003244b3089c0ade6c819,
+      type: 3}
+    size: 20
+  - tag: Slash
+    prefab: {fileID: 5390579357298907539, guid: d6136ee744b628f419fe461380a8148b,
+      type: 3}
+    size: 20
+  - tag: BlueOrb
+    prefab: {fileID: 5390579357298907539, guid: cdea2f37590b4f64bb090495b5132c47,
+      type: 3}
+    size: 20
+  - tag: PurpleOrb
+    prefab: {fileID: 5390579357298907539, guid: f26a52fd613efcc489626557fb65745a,
+      type: 3}
+    size: 20
+  - tag: OrangeOrb
+    prefab: {fileID: 5390579357298907539, guid: ba1c87255b1d51c4c99b77e4f44f9145,
+      type: 3}
+    size: 20
+  - tag: GreenOrb
+    prefab: {fileID: 5390579357298907539, guid: 23be2a9787566ee408f8d47d25c48d61,
+      type: 3}
+    size: 20
+  - tag: RedOrb
+    prefab: {fileID: 5390579357298907539, guid: 0be70753fc6efc749b1eb39b6db9285d,
+      type: 3}
+    size: 20
   BulletContainer: {fileID: 6257289456141094977}

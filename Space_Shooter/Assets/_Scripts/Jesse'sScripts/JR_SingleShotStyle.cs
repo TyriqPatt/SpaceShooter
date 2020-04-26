@@ -86,6 +86,67 @@ public class JR_SingleShotStyle : MonoBehaviour
                     nextTimeToFire = 0;
                     break;
                 }
+            case State.Frost:
+                {
+                    objectPooler.SpawnFromPool("Frost", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.RedTrail:
+                {
+                    objectPooler.SpawnFromPool("RedTrail", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.BlueTrail:
+                {
+                    objectPooler.SpawnFromPool("BlueTrail", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.PurpleTrail:
+                {
+                    objectPooler.SpawnFromPool("PurpleTrail", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.Slash:
+                {
+                    objectPooler.SpawnFromPool("Slash", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.BlueOrb:
+                {
+                    objectPooler.SpawnFromPool("BlueOrb", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.PurpleOrb:
+                {
+                    objectPooler.SpawnFromPool("PurpleOrb", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.OrangeOrb:
+                {
+                    objectPooler.SpawnFromPool("OrangeOrb", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.GreenOrb:
+                {
+                    objectPooler.SpawnFromPool("GreenOrb", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.LastOrb:
+                {
+                    objectPooler.SpawnFromPool("RedOrb", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            
         }
         
 
