@@ -9,7 +9,17 @@ public class JR_SingleShotStyle : MonoBehaviour
 
     public float Firerate = 4f;
     public float nextTimeToFire = 0f;
+    //JR_EnemyObjectPooling m_objectPooling;
+    public JR_EneObjectPooler objectPooler; 
 
+    public enum State
+    {
+        Fire,
+        Lighting,
+        BlackHole,
+        Double
+    }
+    public State _state; 
     
 
     //JR_EnemyObjectPooling m_enemyOjectPooling; 
@@ -18,7 +28,8 @@ public class JR_SingleShotStyle : MonoBehaviour
     void Start()
     {
         //barrel = gameObject.transform.GetChild(0).transform;
-
+        // m_objectPooling = GetComponent<JR_EnemyObjectPooling>(); 
+        objectPooler = JR_EneObjectPooler.Instance; 
     }
 
     // Update is called once per frame
@@ -38,18 +49,34 @@ public class JR_SingleShotStyle : MonoBehaviour
 
     void SingleFire()
     {
-        for (int i = 0; i < JR_EnemyObjectPooling.Instance.ObjectList.Count; i++)
+        switch(_state)
         {
-            if (JR_EnemyObjectPooling.Instance.ObjectList[i].activeInHierarchy == false)
-            {
-                JR_EnemyObjectPooling.Instance.ObjectList[i].SetActive(true);
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.position = barrel.transform.position;
-                JR_EnemyObjectPooling.Instance.ObjectList[i].transform.rotation = barrel.transform.rotation;
-
-                break;
-            }
+            case State.Fire:
+                {
+                    objectPooler.SpawnFromPool("Fire", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break; 
+                }
+            case State.Lighting:
+                {
+                    objectPooler.SpawnFromPool("Lighting", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.BlackHole:
+                {
+                    objectPooler.SpawnFromPool("BlackHole", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
+            case State.Double:
+                {
+                    objectPooler.SpawnFromPool("Double", barrel.transform.position, barrel.transform.rotation);
+                    nextTimeToFire = 0;
+                    break;
+                }
         }
-        nextTimeToFire = 0;
+        
 
       
     }
