@@ -70,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            DealDamage(DamageValues._instance.EnemyBullet);
+            //DealDamage(DamageValues._instance.EnemyBullet);
         }
     }
 

@@ -32,6 +32,7 @@ public class ShotBehavior : MonoBehaviour {
             Debug.Log("Hit");
             Enemy_HP = other.GetComponent<JR_EnemyHealth>();
             Enemy_HP.TakeDamage(DamageValues._instance.BasicBullet);
+            gameObject.SetActive(false);
         }
     }
 

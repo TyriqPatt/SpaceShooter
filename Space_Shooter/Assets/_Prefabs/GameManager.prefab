@@ -92,5 +92,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2674571acec97384eaf9b8636d24899c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BasicBullet: 0
+  BasicBullet: 1
   EnemyBullet: 1
