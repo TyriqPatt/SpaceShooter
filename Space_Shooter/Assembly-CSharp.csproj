@@ -85,6 +85,7 @@
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyMovement.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EnemyObjectPooling.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_EneObjectPooler.cs" />
+    <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_Points.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_RotateAround.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SingleShotStyle.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_SpreadStyle.cs" />
