@@ -17,7 +17,18 @@ public class JR_SingleShotStyle : MonoBehaviour
         Fire,
         Lighting,
         BlackHole,
-        Double
+        Double,
+        Frost,
+        RedTrail,
+        BlueTrail,
+        PurpleTrail,
+        Slash,
+        BlueOrb,
+        PurpleOrb,
+        OrangeOrb,
+        GreenOrb,
+        LastOrb,
+
     }
     public State _state; 
     
