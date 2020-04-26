@@ -9,11 +9,12 @@ public class JR_BasicProjectileMovement : MonoBehaviour
     public float Lifetime;
     float LifeCounter;
     public GameObject W_impact;
+    PlayerHealth m_playerHealth; 
 
     // Use this for initialization
     void Start()
     {
-
+        m_playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,10 @@ public class JR_BasicProjectileMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         gameObject.SetActive(false);
+        if (collision.gameObject.GetComponent<PlayerHealth>())
+        {
+            m_playerHealth.DealDamage(10); 
+        }
 
     }
 
