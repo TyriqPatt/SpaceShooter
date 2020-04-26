@@ -793,6 +793,11 @@ PrefabInstance:
       propertyPath: _state
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7506750210041340489, guid: 9b0cb5b21abe41f43adf75415ca995f5,
+        type: 3}
+      propertyPath: Firerate
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b0cb5b21abe41f43adf75415ca995f5, type: 3}
 --- !u!1 &1627017262 stripped
@@ -880,6 +885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826979760833298707, guid: dcf50257c745ade4a8f4ce26ccbf1964,
+        type: 3}
+      propertyPath: Firerate
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcf50257c745ade4a8f4ce26ccbf1964, type: 3}
@@ -1396,6 +1406,171 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].tag
+      value: Frost
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].tag
+      value: RedTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].tag
+      value: BlueTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[7].tag
+      value: PurpleTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[7].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[7].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[8].tag
+      value: Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[8].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[8].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[9].tag
+      value: BlueOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[9].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[9].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[10].tag
+      value: PurpleOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[10].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[10].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[11].tag
+      value: OrangeOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[11].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[11].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[12].tag
+      value: GreenOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[12].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[12].size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[13].tag
+      value: LastOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[13].prefab
+      value: 
+      objectReference: {fileID: 4064680009913567517, guid: 7ad6a12296c318b4b8f6f42a9609c274,
+        type: 3}
+    - target: {fileID: 6257289456141094976, guid: 9f64dc241031b1b4282e47b21f241b42,
+        type: 3}
+      propertyPath: listOfPools.Array.data[13].size
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f64dc241031b1b4282e47b21f241b42, type: 3}
