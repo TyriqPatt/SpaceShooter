@@ -235,26 +235,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 342441063062670802}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1193890554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7266850033420505316, guid: aa236734eef253b48aee316a8a36ce2f,
-    type: 3}
-  m_PrefabInstance: {fileID: 9066306733245692769}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1193890555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193890554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2674571acec97384eaf9b8636d24899c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BasicBullet: 0
-  EnemyBullet: 1
 --- !u!4 &1335056673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3976897783673031770, guid: 9f1c1bc861c11b34990f6f8cc317c20f,
@@ -925,11 +905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187108010203649547, guid: 4885bd460fbca2f48b12c79c3853fa66,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 279
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4885bd460fbca2f48b12c79c3853fa66, type: 3}

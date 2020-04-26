@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5696109313265330102}
   - component: {fileID: 1639376965411346726}
+  - component: {fileID: 1193890555}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MonoBehaviour:
   BulletContainer: {fileID: 2792918825618077542}
   ObjectsSpawned: 10
   ObjectList: []
+--- !u!114 &1193890555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266850033420505316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2674571acec97384eaf9b8636d24899c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BasicBullet: 0
+  EnemyBullet: 1
