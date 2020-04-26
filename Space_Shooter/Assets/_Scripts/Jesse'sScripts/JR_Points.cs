@@ -16,7 +16,14 @@ public class JR_Points : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy" )
         {
-
+            isTaken = true; 
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            isTaken = false; 
         }
     }
 

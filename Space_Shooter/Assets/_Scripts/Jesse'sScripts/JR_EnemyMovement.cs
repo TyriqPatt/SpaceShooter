@@ -30,7 +30,9 @@ public class JR_EnemyMovement : MonoBehaviour
         playerVec = new Vector3(player.transform.position.x, 0, player.transform.position.z);
 
         _points = GameObject.FindGameObjectsWithTag("Point");
-        target = _points[3]; 
+        ranNum = Random.RandomRange(0, 15);
+
+        target = _points[ranNum];  
     }
 
     // Update is called once per frame
@@ -66,19 +68,21 @@ public class JR_EnemyMovement : MonoBehaviour
             EnemyLookAt();
 
         }
-
-
         if (MoveTimer <= 0)
         {
+            PickPoint();
+        }
+    }
+
+    private void PickPoint()
+    {
+        
             ranNum = Random.RandomRange(0, 15);
+
             target = _points[ranNum];
 
             MoveTimer = Random.Range(6, 10);
-        }
-
-
-
-
+        
     }
 
 
@@ -87,6 +91,14 @@ public class JR_EnemyMovement : MonoBehaviour
         
             transform.LookAt(target.transform.position);
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            PickPoint(); 
+        }
     }
 
 
