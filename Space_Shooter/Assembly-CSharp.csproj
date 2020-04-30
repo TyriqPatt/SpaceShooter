@@ -101,6 +101,18 @@
     <Compile Include="Assets\_Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\_Scripts\ThirdPersonMovement.cs" />
     <Compile Include="Assets\_Scripts\TopDownMovement.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiBeamScript.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiButtonScript.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiDragMouseOrbit.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiFireProjectile.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiLoadSceneOnClick.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiLoopScript.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\InteractiveDemo\Demo Scripts\SciFiProjectileScript.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiBeamStatic.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiLightFade.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiLightFlicker.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiPitchRandomizer.cs" />
+    <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiRotation.cs" />
     <Compile Include="Assets\IdleBehavior.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
@@ -124,6 +136,7 @@
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAdditive.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\IceShader01.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
+    <None Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Arsenal Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
