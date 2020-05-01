@@ -95,6 +95,7 @@
     <Compile Include="Assets\_Scripts\MMDoor.cs" />
     <Compile Include="Assets\_Scripts\ObjectPooling.cs" />
     <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\_Scripts\RoomCover.cs" />
     <Compile Include="Assets\_Scripts\RoomManager.cs" />
     <Compile Include="Assets\_Scripts\RoomTemplates.cs" />
     <Compile Include="Assets\_Scripts\ShotBehavior.cs" />

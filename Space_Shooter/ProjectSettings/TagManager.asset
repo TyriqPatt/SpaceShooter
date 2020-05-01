@@ -13,6 +13,7 @@ TagManager:
   - EnemyBulletContainer
   - Point
   - Invincible
+  - Obstruction
   layers:
   - Default
   - TransparentFX

@@ -72,12 +72,12 @@ public class TopDownMovement : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
             {
-                if (hit.transform.name == "Wall")
+                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
                 {
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.z = 0;
             }
@@ -89,12 +89,12 @@ public class TopDownMovement : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
             {
-                if (hit.transform.name == "Wall")
+                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
                 {
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.z = 0;
             }
@@ -106,12 +106,12 @@ public class TopDownMovement : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity))
             {
-                if (hit.transform.name == "Wall")
+                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
                 {
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.x = 0;
             }
@@ -123,12 +123,12 @@ public class TopDownMovement : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, Mathf.Infinity))
             {
-                if (hit.transform.name == "Wall")
+                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
                 {
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.x = 0;
             }
