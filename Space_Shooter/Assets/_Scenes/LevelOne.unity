@@ -755,6 +755,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3976897783772286854, guid: 9f1c1bc861c11b34990f6f8cc317c20f,
+        type: 3}
+      propertyPath: dashspeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
 --- !u!1001 &4187108011129833349
