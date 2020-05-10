@@ -56,7 +56,7 @@ public class TopDownMovement : MonoBehaviour
     {
         //moveSpeed *= 2;
         isdashing = true;
-        Dash();
+        
         yield return new WaitForSeconds(.1f);
         //moveSpeed /= 2;
         Rig.velocity = Vector3.zero;
@@ -67,7 +67,7 @@ public class TopDownMovement : MonoBehaviour
     {
         WallDectection();
         Move();
-        
+        Dash();
     }
 
     private void Move()
@@ -130,79 +130,6 @@ public class TopDownMovement : MonoBehaviour
             {
                 movement.z = 0;
             }
-        }
-
-        if (movement.z == -1)
-        {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
-            {
-                movement.z = 0;
-            }
-        }
-
-        if (movement.x == 1)
-        {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
-            {
-                movement.x = 0;
-            }
-        }
-
-        if (movement.x == -1)
-        {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
-            {
-                movement.x = 0;
-            }
-        }
-    }
-
-    void Dash()
-    {
-        if (movement.z == 1)
-        {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
-            {
-                movement.z = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
-            }
             DashState = State.f;
         }
 
@@ -217,14 +144,12 @@ public class TopDownMovement : MonoBehaviour
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.z = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
             }
             DashState = State.b;
-        }       
+        }
 
         if (movement.x == 1)
         {
@@ -237,11 +162,9 @@ public class TopDownMovement : MonoBehaviour
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.x = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
             }
             DashState = State.r;
         }
@@ -257,95 +180,183 @@ public class TopDownMovement : MonoBehaviour
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
+            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.x = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
             }
             DashState = State.l;
         }
-
         //fr
         if (movement.z == 1 && movement.x == 1)
         {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(1, 0, 1), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(1,0,1) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
-            {
-                movement.z = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
-            }
             DashState = State.fr;
         }
         //fl
         if (movement.z == 1 && movement.x == -1)
         {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(-1, 0, 1), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, 1) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
-            {
-                movement.z = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
-            }
             DashState = State.fl;
         }
         //br
         if (movement.z == -1 && movement.x == 1)
         {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(1, 0, -1), out hit, Mathf.Infinity))
-            {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(1, 0, -1) * hit.distance, Color.yellow);
-                }
-            }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
-            {
-                movement.z = 0;
-                Rig.velocity = Vector3.zero;
-                isdashing = false;
-            }
             DashState = State.br;
         }
-
         //bl
         if (movement.z == -1 && movement.x == -1)
         {
-            RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(-1, 0, -1), out hit, Mathf.Infinity))
+            DashState = State.bl;
+        }
+    }
+
+    void Dash()
+    {
+        RaycastHit hitf;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitf, Mathf.Infinity))
+        {
+            if (hitf.transform.name == "Wall" || hitf.transform.tag == "Obstruction")
             {
-                if (hit.transform.name == "Wall" || hit.transform.tag == "Obstruction")
-                {
-                    Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, -1) * hit.distance, Color.yellow);
-                }
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitf.distance, Color.yellow);
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 5 && hit.transform.tag == "Obstruction")
+        }
+        if (hitf.distance <= 3 && hitf.transform.name == "Wall" || hitf.distance <= 5 && hitf.transform.tag == "Obstruction")
+        {
+            if (DashState == State.f)
             {
-                movement.z = 0;
                 Rig.velocity = Vector3.zero;
                 isdashing = false;
             }
-            DashState = State.bl;
+        }
+
+        RaycastHit hitb;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.back), out hitb, Mathf.Infinity))
+        {
+            if (hitb.transform.name == "Wall" || hitb.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hitb.distance, Color.yellow);
+            }
+        }
+        if (hitb.distance <= 3 && hitb.transform.name == "Wall" || hitb.distance <= 5 && hitb.transform.tag == "Obstruction")
+        {
+
+            if (DashState == State.b)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+
+        RaycastHit hitr;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitr, Mathf.Infinity))
+        {
+            if (hitr.transform.name == "Wall" || hitr.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hitr.distance, Color.yellow);
+            }
+        }
+        if (hitr.distance <= 3 && hitr.transform.name == "Wall" || hitr.distance <= 5 && hitr.transform.tag == "Obstruction")
+        {
+            if (DashState == State.r)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+
+        RaycastHit hitl;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitl, Mathf.Infinity))
+        {
+            if (hitl.transform.name == "Wall" || hitl.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hitl.distance, Color.yellow);
+            }
+        }
+        if (hitl.distance <= 3 && hitl.transform.name == "Wall" || hitl.distance <= 5 && hitl.transform.tag == "Obstruction")
+        {
+            if (DashState == State.l)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+
+        //fr
+        RaycastHit hitfr;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(1, 0, 1), out hitfr, Mathf.Infinity))
+        {
+            if (hitfr.transform.name == "Wall" || hitfr.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(1, 0, 1) * hitfr.distance, Color.yellow);
+            }
+        }
+        if (hitfr.distance <= 3 && hitfr.transform.name == "Wall" || hitfr.distance <= 5 && hitfr.transform.tag == "Obstruction")
+        {
+            if (DashState == State.fr)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+
+        //fl
+        RaycastHit hitfl;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(-1, 0, 1), out hitfl, Mathf.Infinity))
+        {
+            if (hitfl.transform.name == "Wall" || hitfl.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, 1) * hitfl.distance, Color.yellow);
+            }
+        }
+        if (hitfl.distance <= 3 && hitfl.transform.name == "Wall" || hitfl.distance <= 5 && hitfl.transform.tag == "Obstruction")
+        {
+            if (DashState == State.fl)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+        
+        //br
+        RaycastHit hitbr;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(1, 0, -1), out hitbr, Mathf.Infinity))
+        {
+            if (hitbr.transform.name == "Wall" || hitbr.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(1, 0, -1) * hitbr.distance, Color.yellow);
+            }
+        }
+        if (hitbr.distance <= 3 && hitbr.transform.name == "Wall" || hitbr.distance <= 5 && hitbr.transform.tag == "Obstruction")
+        {
+            if (DashState == State.br)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
+        }
+
+        //bl
+        RaycastHit hitbl;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(-1, 0, -1), out hitbl, Mathf.Infinity))
+        {
+            if (hitbl.transform.name == "Wall" || hitbl.transform.tag == "Obstruction")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, -1) * hitbl.distance, Color.yellow);
+            }
+        }
+        if (hitbl.distance <= 3 && hitbl.transform.name == "Wall" || hitbl.distance <= 5 && hitbl.transform.tag == "Obstruction")
+        {
+            if (DashState == State.bl)
+            {
+                Rig.velocity = Vector3.zero;
+                isdashing = false;
+            }
         }
     }
 }
