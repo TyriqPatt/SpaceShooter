@@ -13,6 +13,7 @@ public class TopDownMovement : MonoBehaviour
     public Vector3 movement;
     public float ForwardDis;
     bool isdashing;
+    public TrailRenderer trail;
     public enum State { f, b, r,l,fr,fl,br,bl }
 
     public State DashState;
@@ -20,7 +21,9 @@ public class TopDownMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rig = GetComponent<Rigidbody>();   
+        Rig = GetComponent<Rigidbody>();
+        trail = GetComponent<TrailRenderer>();
+        trail.enabled = false;
     }
 
     // Update is called once per frame
@@ -48,19 +51,20 @@ public class TopDownMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             
-            StartCoroutine(speedboost());
+            StartCoroutine(dash());
         }
     }
 
-    IEnumerator speedboost()
+    IEnumerator dash()
     {
         //moveSpeed *= 2;
         isdashing = true;
-        
+        trail.enabled = true;
         yield return new WaitForSeconds(.1f);
         //moveSpeed /= 2;
         Rig.velocity = Vector3.zero;
         isdashing = false;
+        trail.enabled = false;
     }
 
     private void LateUpdate()
