@@ -17,6 +17,9 @@ public class Canons : MonoBehaviour
     void Start()
     {
         CurLaser = laser;
+        Weapon();
+        //Weapon2();
+        //Weapon3();
     }
 
     // Update is called once per frame
@@ -88,5 +91,33 @@ public class Canons : MonoBehaviour
         //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
         //Rightps.Play();
         //Leftps.Play();
+    }
+
+
+    public void Weapon()
+    {
+        Firerate = 3;
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .2f;
+        }
+    }
+
+    public void Weapon2()
+    {
+        Firerate = 7;
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .4f;
+        }
+    }
+
+    public void Weapon3()
+    {
+        Firerate = 1;
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .15f;
+        }
     }
 }
