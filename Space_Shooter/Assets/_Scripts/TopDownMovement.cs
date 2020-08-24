@@ -223,7 +223,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitf.distance, Color.yellow);
             }
         }
-        if (hitf.distance <= 3 && hitf.transform.name == "Wall" || hitf.distance <= 5 && hitf.transform.tag == "Obstruction")
+        if (hitf.distance <= 5 && hitf.transform.name == "Wall" || hitf.distance <= 5 && hitf.transform.tag == "Obstruction")
         {
             if (DashState == State.f)
             {
@@ -241,7 +241,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back) * hitb.distance, Color.yellow);
             }
         }
-        if (hitb.distance <= 3 && hitb.transform.name == "Wall" || hitb.distance <= 5 && hitb.transform.tag == "Obstruction")
+        if (hitb.distance <= 5 && hitb.transform.name == "Wall" || hitb.distance <= 5 && hitb.transform.tag == "Obstruction")
         {
 
             if (DashState == State.b)
@@ -260,7 +260,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * hitr.distance, Color.yellow);
             }
         }
-        if (hitr.distance <= 3 && hitr.transform.name == "Wall" || hitr.distance <= 5 && hitr.transform.tag == "Obstruction")
+        if (hitr.distance <= 5 && hitr.transform.name == "Wall" || hitr.distance <= 5 && hitr.transform.tag == "Obstruction")
         {
             if (DashState == State.r)
             {
@@ -278,7 +278,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left) * hitl.distance, Color.yellow);
             }
         }
-        if (hitl.distance <= 3 && hitl.transform.name == "Wall" || hitl.distance <= 5 && hitl.transform.tag == "Obstruction")
+        if (hitl.distance <= 5 && hitl.transform.name == "Wall" || hitl.distance <= 5 && hitl.transform.tag == "Obstruction")
         {
             if (DashState == State.l)
             {
@@ -297,7 +297,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(1, 0, 1) * hitfr.distance, Color.yellow);
             }
         }
-        if (hitfr.distance <= 3 && hitfr.transform.name == "Wall" || hitfr.distance <= 5 && hitfr.transform.tag == "Obstruction")
+        if (hitfr.distance <= 5 && hitfr.transform.name == "Wall" || hitfr.distance <= 5 && hitfr.transform.tag == "Obstruction")
         {
             if (DashState == State.fr)
             {
@@ -316,7 +316,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, 1) * hitfl.distance, Color.yellow);
             }
         }
-        if (hitfl.distance <= 3 && hitfl.transform.name == "Wall" || hitfl.distance <= 5 && hitfl.transform.tag == "Obstruction")
+        if (hitfl.distance <= 5 && hitfl.transform.name == "Wall" || hitfl.distance <= 5 && hitfl.transform.tag == "Obstruction")
         {
             if (DashState == State.fl)
             {
@@ -335,7 +335,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(1, 0, -1) * hitbr.distance, Color.yellow);
             }
         }
-        if (hitbr.distance <= 3 && hitbr.transform.name == "Wall" || hitbr.distance <= 5 && hitbr.transform.tag == "Obstruction")
+        if (hitbr.distance <= 5 && hitbr.transform.name == "Wall" || hitbr.distance <= 5 && hitbr.transform.tag == "Obstruction")
         {
             if (DashState == State.br)
             {
@@ -354,7 +354,7 @@ public class TopDownMovement : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(-1, 0, -1) * hitbl.distance, Color.yellow);
             }
         }
-        if (hitbl.distance <= 3 && hitbl.transform.name == "Wall" || hitbl.distance <= 5 && hitbl.transform.tag == "Obstruction")
+        if (hitbl.distance <= 5 && hitbl.transform.name == "Wall" || hitbl.distance <= 5 && hitbl.transform.tag == "Obstruction")
         {
             if (DashState == State.bl)
             {
