@@ -7,21 +7,26 @@ public class TopDownMovement : MonoBehaviour
 
     public float moveSpeed;
     public float rotSpeed = 7f;
-    public float dashspeed;
+    public float dashSpeed;
+    public float dashDuration = .1f;
     public GameObject PlayerObj;
     Rigidbody Rig;
     public Vector3 movement;
     public float ForwardDis;
     bool isdashing;
     public TrailRenderer trail;
+    public DashAbility Dash_Ability;
     public enum State { f, b, r,l,fr,fl,br,bl }
+    public enum C_State { Tank, Comander, Scout }
 
     public State DashState;
+    public C_State ClassState;
 
     // Start is called before the first frame update
     void Start()
     {
         Rig = GetComponent<Rigidbody>();
+        Dash_Ability = GetComponent<DashAbility>();
         trail = GetComponent<TrailRenderer>();
         trail.enabled = false;
     }
@@ -50,8 +55,8 @@ public class TopDownMovement : MonoBehaviour
         //Dash
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
             StartCoroutine(dash());
+            Dash_Ability.AbilityCall();
         }
     }
 
@@ -60,7 +65,7 @@ public class TopDownMovement : MonoBehaviour
         //moveSpeed *= 2;
         isdashing = true;
         trail.enabled = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(dashDuration);
         //moveSpeed /= 2;
         Rig.velocity = Vector3.zero;
         isdashing = false;
@@ -84,35 +89,35 @@ public class TopDownMovement : MonoBehaviour
         {
             if (DashState == State.f)
             {
-                Rig.velocity = new Vector3(0, 0, dashspeed);
+                Rig.velocity = new Vector3(0, 0, dashSpeed);
             }
             if (DashState == State.b)
             {
-                Rig.velocity = new Vector3(0, 0, -dashspeed);
+                Rig.velocity = new Vector3(0, 0, -dashSpeed);
             }
             if (DashState == State.r)
             {
-                Rig.velocity = new Vector3(dashspeed, 0, 0);
+                Rig.velocity = new Vector3(dashSpeed, 0, 0);
             }
             if (DashState == State.l)
             {
-                Rig.velocity = new Vector3(-dashspeed, 0, 0);
+                Rig.velocity = new Vector3(-dashSpeed, 0, 0);
             }
             if (DashState == State.fl)
             {
-                Rig.velocity = new Vector3(-dashspeed, 0, dashspeed);
+                Rig.velocity = new Vector3(-dashSpeed, 0, dashSpeed);
             }
             if (DashState == State.fr)
             {
-                Rig.velocity = new Vector3(dashspeed, 0, dashspeed);
+                Rig.velocity = new Vector3(dashSpeed, 0, dashSpeed);
             }
             if (DashState == State.br)
             {
-                Rig.velocity = new Vector3(dashspeed, 0, -dashspeed);
+                Rig.velocity = new Vector3(dashSpeed, 0, -dashSpeed);
             }
             if (DashState == State.bl)
             {
-                Rig.velocity = new Vector3(-dashspeed, 0, -dashspeed);
+                Rig.velocity = new Vector3(-dashSpeed, 0, -dashSpeed);
             }
         }
     }

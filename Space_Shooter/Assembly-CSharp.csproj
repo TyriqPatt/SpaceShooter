@@ -76,7 +76,9 @@
     <Compile Include="Assets\_Scripts\AdjustCamera.cs" />
     <Compile Include="Assets\_Scripts\Canons.cs" />
     <Compile Include="Assets\_Scripts\DamageValues.cs" />
+    <Compile Include="Assets\_Scripts\DashAbility.cs" />
     <Compile Include="Assets\_Scripts\Destroyer.cs" />
+    <Compile Include="Assets\_Scripts\DestroyScript.cs" />
     <Compile Include="Assets\_Scripts\Isometric_Cam.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_BasicProjectileMovement.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_DisperseStyle.cs" />
