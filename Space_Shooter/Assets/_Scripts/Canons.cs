@@ -7,19 +7,30 @@ public class Canons : MonoBehaviour
 {
 
     public GameObject CurLaser, laser, HeavyLaser;
-    public Transform RightCanon, LeftCanon, CenterCanon;
+    public Transform RightCanon, RightCanon2, LeftCanon, LeftCanon2, CenterCanon;
     public ParticleSystem Leftps, Rightps;
     public float Firerate = 15f;
     public float nextTimeToFire = 0f;
+    public enum State { Tank, Commander, Scout }
 
+    public State ClassState;
 
     // Start is called before the first frame update
     void Start()
     {
         CurLaser = laser;
-        Weapon();
-        //Weapon2();
-        //Weapon3();
+        if (ClassState == State.Tank)
+        {
+            TankWeapon();
+        }
+        else if (ClassState == State.Commander)
+        {
+            CommanderWeapon();
+        }
+        else if (ClassState == State.Scout)
+        {
+            ScoutWeapon();
+        }        
     }
 
     // Update is called once per frame
@@ -30,7 +41,15 @@ public class Canons : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1f / Firerate;
-                SingleFire();
+                if (ClassState == State.Tank)
+                {
+                    DuelFire();
+                }
+                else
+                {
+                    SingleFire();
+                }
+                
             }
         }
     }
@@ -48,14 +67,14 @@ public class Canons : MonoBehaviour
                 break;
             }
         }
-
-     
     }
 
     void DuelFire()
     {
         shoot();
         shoot2();
+        shoot3();
+        shoot4();
     }
 
     void shoot()
@@ -93,28 +112,68 @@ public class Canons : MonoBehaviour
         //Leftps.Play();
     }
 
-
-    public void Weapon()
+    void shoot3()
     {
-        Firerate = 3;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .2f;
+            if (ObjectPooling.Instance.ObjectList[i + 3].activeInHierarchy == false)
+            {
+
+                ObjectPooling.Instance.ObjectList[i + 3].SetActive(true);
+                ObjectPooling.Instance.ObjectList[i + 3].transform.position = RightCanon2.transform.position;
+                ObjectPooling.Instance.ObjectList[i + 3].transform.rotation = RightCanon2.transform.rotation;
+                break;
+            }
+        }
+
+        //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
+        //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
+        //Rightps.Play();
+        //Leftps.Play();
+    }
+
+    void shoot4()
+    {
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            if (ObjectPooling.Instance.ObjectList[i + 4].activeInHierarchy == false)
+            {
+
+                ObjectPooling.Instance.ObjectList[i + 4].SetActive(true);
+                ObjectPooling.Instance.ObjectList[i + 4].transform.position = LeftCanon2.transform.position;
+                ObjectPooling.Instance.ObjectList[i + 4].transform.rotation = LeftCanon2.transform.rotation;
+                break;
+            }
+        }
+
+        //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
+        //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
+        //Rightps.Play();
+        //Leftps.Play();
+    }
+
+
+    public void CommanderWeapon()
+    {
+        Firerate = 3.5f;
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .3f;
         }
     }
 
-    public void Weapon2()
+    public void ScoutWeapon()
     {
         Firerate = 7;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .4f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .5f;
         }
     }
 
-    public void Weapon3()
+    public void TankWeapon()
     {
-        Firerate = 1;
+        Firerate = 2f;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
             ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .15f;

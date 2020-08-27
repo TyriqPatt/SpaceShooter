@@ -746,6 +746,86 @@ PrefabInstance:
       propertyPath: Hearts.Array.data[9]
       value: 
       objectReference: {fileID: 2011754902}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1457222651}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1429503221}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 333472024}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 847702003}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 401528971}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[5]
+      value: 
+      objectReference: {fileID: 1955713255}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[6]
+      value: 
+      objectReference: {fileID: 1698468205}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[7]
+      value: 
+      objectReference: {fileID: 1992035734}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[8]
+      value: 
+      objectReference: {fileID: 521330929}
+    - target: {fileID: 1641970348650263, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[9]
+      value: 
+      objectReference: {fileID: 2011754902}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1457222651}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1429503221}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 333472024}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 847702003}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 401528971}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[5]
+      value: 
+      objectReference: {fileID: 1955713255}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[6]
+      value: 
+      objectReference: {fileID: 1698468205}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[7]
+      value: 
+      objectReference: {fileID: 1992035734}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[8]
+      value: 
+      objectReference: {fileID: 521330929}
+    - target: {fileID: 1970449231352108, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
+      propertyPath: Hearts.Array.data[9]
+      value: 
+      objectReference: {fileID: 2011754902}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
 --- !u!1001 &4187108011129833349

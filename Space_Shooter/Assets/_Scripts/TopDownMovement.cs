@@ -17,7 +17,7 @@ public class TopDownMovement : MonoBehaviour
     public TrailRenderer trail;
     public DashAbility Dash_Ability;
     public enum State { f, b, r,l,fr,fl,br,bl }
-    public enum C_State { Tank, Comander, Scout }
+    public enum C_State { Tank, Commander, Scout }
 
     public State DashState;
     public C_State ClassState;
