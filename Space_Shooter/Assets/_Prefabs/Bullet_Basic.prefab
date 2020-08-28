@@ -128,8 +128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   Lifetime: 0.2
-  W_impact: {fileID: 0}
+  W_impact: {fileID: 8024300267025736839, guid: 8058ea5a4a333d24f8e5a10e9c98be9d,
+    type: 3}
+  CommanderImpact: {fileID: 7497413223749603851, guid: f298e02d8c6f36a4dad7bee8a89b2aa2,
+    type: 3}
   Enemy_HP: {fileID: 0}
+  ClassState: 0
 --- !u!54 &1192928971
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -145,4 +149,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2

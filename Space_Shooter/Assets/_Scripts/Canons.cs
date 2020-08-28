@@ -49,7 +49,6 @@ public class Canons : MonoBehaviour
                 {
                     SingleFire();
                 }
-                
             }
         }
     }
@@ -63,7 +62,6 @@ public class Canons : MonoBehaviour
                 ObjectPooling.Instance.ObjectList[i].SetActive(true);
                 ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
                 ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
-
                 break;
             }
         }
@@ -86,7 +84,6 @@ public class Canons : MonoBehaviour
                 ObjectPooling.Instance.ObjectList[i].SetActive(true);
                 ObjectPooling.Instance.ObjectList[i].transform.position = RightCanon.transform.position;
                 ObjectPooling.Instance.ObjectList[i].transform.rotation = RightCanon.transform.rotation;
-
                 break;
             }
         }
@@ -98,14 +95,12 @@ public class Canons : MonoBehaviour
         {
             if (ObjectPooling.Instance.ObjectList[i + 1].activeInHierarchy == false)
             {
-
                 ObjectPooling.Instance.ObjectList[i + 1].SetActive(true);
                 ObjectPooling.Instance.ObjectList[i + 1].transform.position = LeftCanon.transform.position;
                 ObjectPooling.Instance.ObjectList[i + 1].transform.rotation = LeftCanon.transform.rotation;
                 break;
             }
         }
-
         //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
         //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
         //Rightps.Play();
@@ -116,16 +111,14 @@ public class Canons : MonoBehaviour
     {
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            if (ObjectPooling.Instance.ObjectList[i + 3].activeInHierarchy == false)
+            if (ObjectPooling.Instance.ObjectList[i + 2].activeInHierarchy == false)
             {
-
-                ObjectPooling.Instance.ObjectList[i + 3].SetActive(true);
-                ObjectPooling.Instance.ObjectList[i + 3].transform.position = RightCanon2.transform.position;
-                ObjectPooling.Instance.ObjectList[i + 3].transform.rotation = RightCanon2.transform.rotation;
+                ObjectPooling.Instance.ObjectList[i + 2].SetActive(true);
+                ObjectPooling.Instance.ObjectList[i + 2].transform.position = RightCanon2.transform.position;
+                ObjectPooling.Instance.ObjectList[i + 2].transform.rotation = RightCanon2.transform.rotation;
                 break;
             }
         }
-
         //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
         //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
         //Rightps.Play();
@@ -136,38 +129,36 @@ public class Canons : MonoBehaviour
     {
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            if (ObjectPooling.Instance.ObjectList[i + 4].activeInHierarchy == false)
+            if (ObjectPooling.Instance.ObjectList[i + 3].activeInHierarchy == false)
             {
-
-                ObjectPooling.Instance.ObjectList[i + 4].SetActive(true);
-                ObjectPooling.Instance.ObjectList[i + 4].transform.position = LeftCanon2.transform.position;
-                ObjectPooling.Instance.ObjectList[i + 4].transform.rotation = LeftCanon2.transform.rotation;
+                ObjectPooling.Instance.ObjectList[i + 3].SetActive(true);
+                ObjectPooling.Instance.ObjectList[i + 3].transform.position = LeftCanon2.transform.position;
+                ObjectPooling.Instance.ObjectList[i + 3].transform.rotation = LeftCanon2.transform.rotation;
                 break;
             }
         }
-
         //Instantiate(CurLaser, rightCanon.position, rightCanon.rotation);
         //Instantiate(CurLaser, LeftCanon.position, LeftCanon.rotation);
         //Rightps.Play();
         //Leftps.Play();
     }
 
-
     public void CommanderWeapon()
     {
-        Firerate = 3.5f;
+        Firerate = 4f;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
             ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .3f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Commander;
         }
     }
 
     public void ScoutWeapon()
     {
-        Firerate = 7;
+        Firerate = 8;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .5f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .35f;
         }
     }
 

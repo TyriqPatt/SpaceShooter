@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyScript : MonoBehaviour
+public class DeactivateScript : MonoBehaviour
 {
 
     public float Duration;
@@ -16,6 +16,10 @@ public class DestroyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, Duration);
+        Duration -= Time.deltaTime;
+        if (Duration <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
