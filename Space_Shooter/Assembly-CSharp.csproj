@@ -103,6 +103,7 @@
     <Compile Include="Assets\_Scripts\RoomManager.cs" />
     <Compile Include="Assets\_Scripts\RoomTemplates.cs" />
     <Compile Include="Assets\_Scripts\ShotBehavior.cs" />
+    <Compile Include="Assets\_Scripts\SpecialAbility.cs" />
     <Compile Include="Assets\_Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\_Scripts\ThirdPersonMovement.cs" />
     <Compile Include="Assets\_Scripts\TopDownMovement.cs" />

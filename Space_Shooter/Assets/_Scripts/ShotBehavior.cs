@@ -6,8 +6,6 @@ public class ShotBehavior : MonoBehaviour {
     public float speed;
     public float Lifetime;
     float LifeCounter;
-    public GameObject W_impact;
-    public GameObject CommanderImpact;
     public JR_EnemyHealth Enemy_HP;
     public enum State { Tank, Commander, Scout }
 
@@ -27,13 +25,45 @@ public class ShotBehavior : MonoBehaviour {
             gameObject.SetActive(false);
             if(ClassState == State.Commander)
             {
-                GameObject Cimpact = Instantiate(CommanderImpact, transform.position, transform.rotation);
-                Cimpact.GetComponent<DestroyScript>().Duration = 1;
+                for (int i = 0; i < ObjectPooling.Instance.CImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.CImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.CImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.CImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.CImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.CImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
+            }
+            else if (ClassState == State.Tank)
+            {
+                for (int i = 0; i < ObjectPooling.Instance.TSImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.TSImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.TSImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.TSImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.TSImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.TSImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
             else
             {
-                GameObject Wimpact = Instantiate(W_impact, transform.position, transform.rotation);
-                Wimpact.GetComponent<DestroyScript>().Duration = 1;
+                for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.ImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.ImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.ImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.ImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.ImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
         }
 	}
@@ -48,13 +78,31 @@ public class ShotBehavior : MonoBehaviour {
             gameObject.SetActive(false);
             if (ClassState == State.Commander)
             {
-                GameObject Cimpact = Instantiate(CommanderImpact, transform.position, transform.rotation);
-                Cimpact.GetComponent<DestroyScript>().Duration = 1;
+                for (int i = 0; i < ObjectPooling.Instance.CImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.CImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.CImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.CImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.CImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.CImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
             else
             {
-                GameObject Wimpact = Instantiate(W_impact, transform.position, transform.rotation);
-                Wimpact.GetComponent<DestroyScript>().Duration = 1;
+                for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.ImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.ImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.ImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.ImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.ImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
                 gameObject.SetActive(false);
             }
         }
@@ -62,31 +110,65 @@ public class ShotBehavior : MonoBehaviour {
         {
             if (ClassState == State.Commander)
             {
-                GameObject Cimpact = Instantiate(CommanderImpact, transform.position, transform.rotation);
-                Cimpact.GetComponent<DestroyScript>().Duration = 1;
-                gameObject.SetActive(false);
+                for (int i = 0; i < ObjectPooling.Instance.CImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.CImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.CImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.CImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.CImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.CImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
             else
             {
-                GameObject Wimpact = Instantiate(W_impact, transform.position, transform.rotation);
-                Wimpact.GetComponent<DestroyScript>().Duration = 1;
-                gameObject.SetActive(false);
+                for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.ImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.ImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.ImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.ImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.ImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
+            gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Obstruction")
         {
             if (ClassState == State.Commander)
             {
-                GameObject Cimpact = Instantiate(CommanderImpact, transform.position, transform.rotation);
-                Cimpact.GetComponent<DestroyScript>().Duration = 1;
-                gameObject.SetActive(false);
+                for (int i = 0; i < ObjectPooling.Instance.CImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.CImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.CImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.CImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.CImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.CImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
             else
             {
-                GameObject Wimpact = Instantiate(W_impact, transform.position, transform.rotation);
-                Wimpact.GetComponent<DestroyScript>().Duration = 1;
-                gameObject.SetActive(false);
+                for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.ImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.ImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.ImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.ImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.ImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
             }
+            gameObject.SetActive(false);
         }
     }
 

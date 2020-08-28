@@ -21,12 +21,24 @@ public class ObjectPooling : MonoBehaviour
 
     //prefab that will be pooled
     public GameObject PooledObject;
+    public GameObject Impact;
+    public GameObject TankShot;
+    public GameObject TSImpact;
+    public GameObject CImpact;
     //Hold player bullets
     public GameObject BulletContainer;
+    public GameObject ImpactContainer;
+    public GameObject TankShotContainer;
+    public GameObject TSImpactContainer;
+    public GameObject CImpactContainer;
     //initial amount of objects spawned 
-    public int ObjectsSpawned = 20;
+    public int ObjectsSpawned = 10;
     //List to hold pooled objects
     public List<GameObject> ObjectList = new List<GameObject>();
+    public List<GameObject> ImpactList = new List<GameObject>();
+    public List<GameObject> TankShotList = new List<GameObject>();
+    public List<GameObject> TSImpactList = new List<GameObject>();
+    public List<GameObject> CImpactList = new List<GameObject>();
 
     private void Awake()
     {
@@ -42,6 +54,38 @@ public class ObjectPooling : MonoBehaviour
             objects.transform.parent = BulletContainer.transform;
             objects.SetActive(false);
             ObjectList.Add(objects);
+        }
+
+        for (int i = 0; i < ObjectsSpawned; i++)
+        {
+            GameObject objects = Instantiate(Impact, Vector3.zero, Quaternion.identity) as GameObject;
+            objects.transform.parent = ImpactContainer.transform;
+            objects.SetActive(false);
+            ImpactList.Add(objects);
+        }
+
+        for (int i = 0; i < ObjectsSpawned - 7; i++)
+        {
+            GameObject objects = Instantiate(TankShot, Vector3.zero, Quaternion.identity) as GameObject;
+            objects.transform.parent = TankShotContainer.transform;
+            objects.SetActive(false);
+            TankShotList.Add(objects);
+        }
+
+        for (int i = 0; i < ObjectsSpawned - 7; i++)
+        {
+            GameObject objects = Instantiate(TSImpact, Vector3.zero, Quaternion.identity) as GameObject;
+            objects.transform.parent = TSImpactContainer.transform;
+            objects.SetActive(false);
+            TSImpactList.Add(objects);
+        }
+
+        for (int i = 0; i < ObjectsSpawned; i++)
+        {
+            GameObject objects = Instantiate(CImpact, Vector3.zero, Quaternion.identity) as GameObject;
+            objects.transform.parent = CImpactContainer.transform;
+            objects.SetActive(false);
+            CImpactList.Add(objects);
         }
     }
 }

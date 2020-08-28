@@ -282,6 +282,114 @@ Transform:
   m_Father: {fileID: 4674829152121474}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -6, z: 0}
+--- !u!1 &900059163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900059164}
+  - component: {fileID: 900059168}
+  - component: {fileID: 900059167}
+  - component: {fileID: 900059166}
+  - component: {fileID: 900059165}
+  m_Layer: 0
+  m_Name: ScoutHolo
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &900059164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900059163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4889076855343447}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &900059168
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900059163}
+  m_Mesh: {fileID: 4300004, guid: 21c6d0bb8170cae4f9d49bb728b3f524, type: 3}
+--- !u!23 &900059167
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900059163}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1db17ea2b42aa6a4f8cbf9d1a63166d1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!54 &900059166
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900059163}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &900059165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900059163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.865558, y: 4.241986, z: 11.309124}
+  m_Center: {x: 0.00000047683716, y: -0.000006198883, z: -0.0000011920929}
 --- !u!1 &1167718599
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1501717404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24571,6 +24679,7 @@ GameObject:
   - component: {fileID: 1641970348650264}
   - component: {fileID: 1641970348650263}
   - component: {fileID: 1641970348650265}
+  - component: {fileID: 2053197763}
   m_Layer: 0
   m_Name: ScoutClass
   m_TagString: Player
@@ -24596,6 +24705,7 @@ Transform:
   - {fileID: 3976897783025131635}
   - {fileID: 3976897784827750004}
   - {fileID: 3976897783836705284}
+  - {fileID: 900059164}
   m_Father: {fileID: 3976897783673031770}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24709,9 +24819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbc2741a2024814e9155b3688c167c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurLaser: {fileID: 0}
-  laser: {fileID: 0}
-  HeavyLaser: {fileID: 0}
   RightCanon: {fileID: 86613096}
   RightCanon2: {fileID: 0}
   LeftCanon: {fileID: 1590911704}
@@ -24721,6 +24828,22 @@ MonoBehaviour:
   Rightps: {fileID: 0}
   Firerate: 15
   nextTimeToFire: 0
+  ClassState: 2
+--- !u!114 &2053197763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641970348650261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848f90c599821754ca26ac9e2068f42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoutTeleportCooldown: 0
+  TankShotCooldown: 0
+  ScoutHolo: {fileID: 900059163}
   ClassState: 2
 --- !u!1 &1970449231352106
 GameObject:
@@ -24737,6 +24860,7 @@ GameObject:
   - component: {fileID: 1970449231352109}
   - component: {fileID: 1970449231352108}
   - component: {fileID: 1970449231352110}
+  - component: {fileID: 1691568525}
   m_Layer: 0
   m_Name: TankClass
   m_TagString: Player
@@ -24877,9 +25001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbc2741a2024814e9155b3688c167c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurLaser: {fileID: 0}
-  laser: {fileID: 0}
-  HeavyLaser: {fileID: 0}
   RightCanon: {fileID: 1440160926}
   RightCanon2: {fileID: 1663966098}
   LeftCanon: {fileID: 1865829991}
@@ -24889,6 +25010,22 @@ MonoBehaviour:
   Rightps: {fileID: 0}
   Firerate: 15
   nextTimeToFire: 0
+  ClassState: 0
+--- !u!114 &1691568525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970449231352106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848f90c599821754ca26ac9e2068f42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoutTeleportCooldown: 0
+  TankShotCooldown: 0
+  ScoutHolo: {fileID: 0}
   ClassState: 0
 --- !u!1 &3976897783259598338
 GameObject:
@@ -24906,6 +25043,7 @@ GameObject:
   - component: {fileID: 1556059865}
   - component: {fileID: 3976897784788161271}
   - component: {fileID: 470927632}
+  - component: {fileID: 1892644687}
   m_Layer: 0
   m_Name: CommanderClass
   m_TagString: Player
@@ -25064,9 +25202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bbc2741a2024814e9155b3688c167c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurLaser: {fileID: 0}
-  laser: {fileID: 0}
-  HeavyLaser: {fileID: 0}
   RightCanon: {fileID: 3976897784638453523}
   RightCanon2: {fileID: 0}
   LeftCanon: {fileID: 3976897783523243001}
@@ -25076,6 +25211,22 @@ MonoBehaviour:
   Rightps: {fileID: 0}
   Firerate: 15
   nextTimeToFire: 0
+  ClassState: 1
+--- !u!114 &1892644687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3976897783259598338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848f90c599821754ca26ac9e2068f42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoutTeleportCooldown: 0
+  TankShotCooldown: 0
+  ScoutHolo: {fileID: 0}
   ClassState: 1
 --- !u!1 &3976897783383320551
 GameObject:
@@ -25466,6 +25617,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4674829152121474}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.45
@@ -25522,10 +25677,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -25557,6 +25708,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4889076855343447}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25613,10 +25768,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -25648,6 +25799,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4674829152121474}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25704,10 +25859,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 2.4
@@ -25732,6 +25883,22 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -25752,22 +25919,6 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
 --- !u!4 &3976897783132578850 stripped
@@ -25783,6 +25934,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976897783259598349}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -25838,10 +25993,6 @@ PrefabInstance:
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2
       objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -25964,6 +26115,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4889076855343447}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.28
@@ -26020,10 +26175,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
@@ -26048,6 +26199,18 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -26067,18 +26230,6 @@ PrefabInstance:
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
@@ -26275,6 +26426,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976897783259598349}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7
@@ -26331,10 +26486,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -26366,6 +26517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4674829152121474}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.45
@@ -26422,10 +26577,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -26457,6 +26608,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976897783259598349}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7
@@ -26513,10 +26668,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 3
@@ -26548,6 +26699,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4889076855343447}
     m_Modifications:
+    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: m_Name
+      value: BlueJetFlame2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 404004, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.28
@@ -26604,10 +26759,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: 186012, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: m_Name
-      value: BlueJetFlame2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 19877244, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
@@ -26632,6 +26783,18 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -26651,18 +26814,6 @@ PrefabInstance:
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}

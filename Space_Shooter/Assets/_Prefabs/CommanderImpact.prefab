@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7497413223738851377}
   - component: {fileID: 7497413223749603849}
   - component: {fileID: 7497413223749603850}
-  - component: {fileID: -4409878053801561995}
+  - component: {fileID: -5095418033652145081}
   m_Layer: 0
   m_Name: CommanderImpact
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7497413223749603851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 6.33, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 7497413223749809371}
   - {fileID: 7497413223749806451}
@@ -4884,7 +4884,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4409878053801561995
+--- !u!114 &-5095418033652145081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4893,7 +4893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7497413223749603851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf290bb251b4b4b4b818192c27afc4c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6186dca865ee7cd4985a3206d23df3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0

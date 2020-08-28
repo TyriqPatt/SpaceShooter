@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Canons : MonoBehaviour
 {
 
-    public GameObject CurLaser, laser, HeavyLaser;
     public Transform RightCanon, RightCanon2, LeftCanon, LeftCanon2, CenterCanon;
     public ParticleSystem Leftps, Rightps;
     public float Firerate = 15f;
@@ -18,7 +17,6 @@ public class Canons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurLaser = laser;
         if (ClassState == State.Tank)
         {
             TankWeapon();
@@ -50,6 +48,7 @@ public class Canons : MonoBehaviour
                     SingleFire();
                 }
             }
+            
         }
     }
 
@@ -62,6 +61,22 @@ public class Canons : MonoBehaviour
                 ObjectPooling.Instance.ObjectList[i].SetActive(true);
                 ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
                 ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
+                break;
+            }
+        }
+    }
+
+    public void TankSpecialShoot()
+    {
+        for (int i = 0; i < ObjectPooling.Instance.TankShotList.Count; i++)
+        {
+            if (ObjectPooling.Instance.TankShotList[i].activeInHierarchy == false)
+            {
+                ObjectPooling.Instance.TankShotList[i].SetActive(true);
+                ObjectPooling.Instance.TankShotList[i].GetComponent<ShotBehavior>().Lifetime = .115f;
+                ObjectPooling.Instance.TankShotList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Tank;
+                ObjectPooling.Instance.TankShotList[i].transform.position = CenterCanon.transform.position;
+                ObjectPooling.Instance.TankShotList[i].transform.rotation = CenterCanon.transform.rotation;
                 break;
             }
         }
@@ -145,10 +160,10 @@ public class Canons : MonoBehaviour
 
     public void CommanderWeapon()
     {
-        Firerate = 4f;
+        Firerate = 3f;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .3f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .2f;
             ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Commander;
         }
     }
@@ -158,7 +173,8 @@ public class Canons : MonoBehaviour
         Firerate = 8;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .35f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .25f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Scout;
         }
     }
 
@@ -167,7 +183,8 @@ public class Canons : MonoBehaviour
         Firerate = 2f;
         for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
         {
-            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .15f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .1f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Scout;
         }
     }
 }
