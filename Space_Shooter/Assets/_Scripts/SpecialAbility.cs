@@ -62,8 +62,12 @@ public class SpecialAbility : MonoBehaviour
 
                     if (Physics.Raycast(ray, out Hit))
                     {
-                        transform.parent.position = new Vector3(Hit.point.x, 2.5f, Hit.point.z);
-                        Debug.Log("cuyhagdhga");
+                        if(hit.transform.tag != "Obstruction" || hit.transform.name != "Wall")
+                        {
+                            transform.parent.position = new Vector3(Hit.point.x, 2.5f, Hit.point.z);
+                            Debug.Log("cuyhagdhga");
+                        }
+                        
                     }
                     ScoutTeleportCooldown = 5;
                 }
