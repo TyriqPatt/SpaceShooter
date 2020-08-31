@@ -10,12 +10,13 @@ public class TopDownMovement : MonoBehaviour
     public float dashSpeed;
     public float dashDuration = .1f;
     public GameObject PlayerObj;
-    Rigidbody Rig;
+    public Rigidbody Rig;
     public Vector3 movement;
     public float ForwardDis;
     bool isdashing;
     public TrailRenderer trail;
     public DashAbility Dash_Ability;
+    public bool CanRotate;
     public enum State { f, b, r,l,fr,fl,br,bl }
     public enum C_State { Tank, Commander, Scout }
 
@@ -34,18 +35,21 @@ public class TopDownMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //Look At mouse
-        Plane playerPlane = new Plane(Vector3.up, transform.position);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        float hitDist = 0.0f;
-
-        if(playerPlane.Raycast(ray, out hitDist))
+        if (!CanRotate)
         {
-            Vector3 targetPoint = ray.GetPoint(hitDist);
-            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
-            targetRotation.x = 0;
-            targetRotation.z = 0;
-            PlayerObj.transform.rotation = Quaternion.Slerp(PlayerObj.transform.rotation, targetRotation, rotSpeed * Time.deltaTime);
+            //Look At mouse
+            Plane playerPlane = new Plane(Vector3.up, transform.position);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            float hitDist = 0.0f;
+
+            if (playerPlane.Raycast(ray, out hitDist))
+            {
+                Vector3 targetPoint = ray.GetPoint(hitDist);
+                Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+                targetRotation.x = 0;
+                targetRotation.z = 0;
+                PlayerObj.transform.rotation = Quaternion.Slerp(PlayerObj.transform.rotation, targetRotation, rotSpeed * Time.deltaTime);
+            }
         }
 
         //Movement
@@ -135,7 +139,7 @@ public class TopDownMovement : MonoBehaviour
                     Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 }
             }
-            if (hit.distance <= 2.5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
+            if (hit.distance <= 5 && hit.transform.name == "Wall" || hit.distance <= 2.5 && hit.transform.tag == "Obstruction")
             {
                 movement.z = 0;
             }

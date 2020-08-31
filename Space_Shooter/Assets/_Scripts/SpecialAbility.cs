@@ -6,11 +6,13 @@ public class SpecialAbility : MonoBehaviour
 {
 
     public float ScoutTeleportCooldown;
+    float ScoutTeleportTimer;
     public float TankShotCooldown;
     public GameObject ScoutHolo;
     Canons canons;
-    public GameObject Length;
+    public GameObject ScoutCritDashInd;
     bool ability;
+    public TopDownMovement Movement;
     public enum State { Tank, Commander, Scout }
 
     public State ClassState;
@@ -19,6 +21,7 @@ public class SpecialAbility : MonoBehaviour
     void Start()
     {
         canons = GetComponent<Canons>();
+        Movement = transform.parent.GetComponent<TopDownMovement>();
     }
 
     // Update is called once per frame
@@ -40,43 +43,41 @@ public class SpecialAbility : MonoBehaviour
             }
         }
         
-        
         if (ClassState == State.Scout)
         {
-           
-
-            if (ScoutTeleportCooldown > 0)
+            if (ScoutTeleportTimer > 0)
             {
-                ScoutTeleportCooldown -= Time.deltaTime;
+                ScoutTeleportTimer -= Time.deltaTime;
             }
             else
             {
                 if (Input.GetButton("Fire2"))
                 {
-                    Length.SetActive(true);
+                    ScoutCritDashInd.SetActive(true);
                 }
                 if (Input.GetButtonUp("Fire2"))
                 {
+                    Movement.CanRotate = true;
                     ScoutHolo.SetActive(true);
                     ScoutHolo.transform.parent = null;
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit Hit;
-                    Length.SetActive(false);
+                    //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    //RaycastHit Hit;
+                    //ScoutCritDashInd.SetActive(false);
                     ability = true;
-                    if (Physics.Raycast(ray, out Hit))
-                    {
-                        if(Hit.transform.tag != "Obstruction" && Hit.transform.name != "Wall")
-                        {
-                            //transform.parent.position = new Vector3(Hit.point.x, 2.5f, Hit.point.z);
-                            Debug.Log("cuyhagdhga");
-                        }
-                    }
-                    ScoutTeleportCooldown = 5;
+                    //if (Physics.Raycast(ray, out Hit))
+                    //{
+                    //    if(Hit.transform.tag != "Obstruction" && Hit.transform.name != "Wall")
+                    //    {
+                    //        //transform.parent.position = new Vector3(Hit.point.x, 2.5f, Hit.point.z);
+                    //        Debug.Log("cuyhagdhga");
+                    //    }
+                    //}
+                    ScoutTeleportTimer = ScoutTeleportCooldown;
                 }
             }
             if (ability)
             {
-                transform.parent.position += transform.forward * 5;
+                transform.parent.position += transform.forward * 7;
                 RaycastHit hit;
                 // Does the ray intersect any objects excluding the player layer
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
@@ -86,18 +87,19 @@ public class SpecialAbility : MonoBehaviour
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                     }
                 }
-                if (hit.distance <= 4 && hit.transform.name == "Wall" || hit.distance <= 4 && hit.transform.tag == "Obstruction")
+                if (hit.distance <= 6 && hit.transform.name == "Wall")
                 {
                     ability = false;
+                    Movement.CanRotate = false;
                 }
-                if (ScoutTeleportCooldown < 4.9f)
+                if (ScoutTeleportTimer < ScoutTeleportCooldown - .05f)
                 {
+                    ScoutCritDashInd.SetActive(false);
                     //transform.parent.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     ability = false;
-                    
+                    Movement.CanRotate = false;
                 }
-                //transform.parent.position = Vector3.MoveTowards(transform.parent.position, Hit.transform.position, 5 * Time.deltaTime);
-
+                //transform.parent.position = Vector3.MoveTowards(transform.parent.position, Hit.transform.position, 5 * Time.deltaTime);     
             }
         }
     }
