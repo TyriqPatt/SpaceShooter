@@ -25,12 +25,14 @@ public class ObjectPooling : MonoBehaviour
     public GameObject TankShot;
     public GameObject TSImpact;
     public GameObject CImpact;
+    public GameObject CHolo;
     //Hold player bullets
     public GameObject BulletContainer;
     public GameObject ImpactContainer;
     public GameObject TankShotContainer;
     public GameObject TSImpactContainer;
     public GameObject CImpactContainer;
+    public GameObject CHoloContainer;
     //initial amount of objects spawned 
     public int ObjectsSpawned = 10;
     //List to hold pooled objects
@@ -39,6 +41,7 @@ public class ObjectPooling : MonoBehaviour
     public List<GameObject> TankShotList = new List<GameObject>();
     public List<GameObject> TSImpactList = new List<GameObject>();
     public List<GameObject> CImpactList = new List<GameObject>();
+    public List<GameObject> CHoloList = new List<GameObject>();
 
     private void Awake()
     {
@@ -86,6 +89,14 @@ public class ObjectPooling : MonoBehaviour
             objects.transform.parent = CImpactContainer.transform;
             objects.SetActive(false);
             CImpactList.Add(objects);
+        }
+
+        for (int i = 0; i < ObjectsSpawned - 8; i++)
+        {
+            GameObject objects = Instantiate(CHolo, Vector3.zero, Quaternion.identity) as GameObject;
+            objects.transform.parent = CHoloContainer.transform;
+            objects.SetActive(false);
+            CHoloList.Add(objects);
         }
     }
 }

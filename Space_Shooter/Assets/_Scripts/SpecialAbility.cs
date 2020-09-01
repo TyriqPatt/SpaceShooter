@@ -8,7 +8,8 @@ public class SpecialAbility : MonoBehaviour
     public float ScoutTeleportCooldown;
     float ScoutTeleportTimer;
     public float TankShotCooldown;
-    public GameObject ScoutHolo;
+    public float CommanderCooldown;
+    public GameObject CommanderHolo;
     Canons canons;
     public GameObject ScoutCritDashInd;
     bool ability;
@@ -42,8 +43,7 @@ public class SpecialAbility : MonoBehaviour
                 }
             }
         }
-        
-        if (ClassState == State.Scout)
+        else if (ClassState == State.Scout)
         {
             if (ScoutTeleportTimer > 0)
             {
@@ -58,8 +58,7 @@ public class SpecialAbility : MonoBehaviour
                 if (Input.GetButtonUp("Fire2"))
                 {
                     Movement.CanRotate = true;
-                    ScoutHolo.SetActive(true);
-                    ScoutHolo.transform.parent = null;
+                    
                     //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     //RaycastHit Hit;
                     //ScoutCritDashInd.SetActive(false);
@@ -100,6 +99,39 @@ public class SpecialAbility : MonoBehaviour
                     Movement.CanRotate = false;
                 }
                 //transform.parent.position = Vector3.MoveTowards(transform.parent.position, Hit.transform.position, 5 * Time.deltaTime);     
+            }
+        }
+        else if(ClassState == State.Commander)
+        {
+            if(CommanderCooldown > 0)
+            {
+                CommanderCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                if (Input.GetButtonDown("Fire2"))
+                {
+                    CommanderCooldown = 8;
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit Hit;
+                    if (Physics.Raycast(ray, out Hit))
+                    {
+                        if (Hit.transform.tag != "Obstruction" && Hit.transform.name != "Wall")
+                        {
+                            for (int i = 0; i < ObjectPooling.Instance.CHoloList.Count; i++)
+                            {
+                                if (ObjectPooling.Instance.CHoloList[i].activeInHierarchy == false)
+                                {
+                                    ObjectPooling.Instance.CHoloList[i].transform.position = new Vector3(Hit.point.x, 2.5f, Hit.point.z); ;
+                                    ObjectPooling.Instance.CHoloList[i].SetActive(true);
+                                    ObjectPooling.Instance.CHoloList[i].GetComponent<DeactivateScript>().Duration = 5f;
+                                    ObjectPooling.Instance.CHoloList[i].transform.rotation = transform.rotation;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &271530456 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4889076855343447, guid: 9f1c1bc861c11b34990f6f8cc317c20f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3976897784788161269}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &333472024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 333472024, guid: 2f7052c2fb194ac4db783b7cdb160e41,
@@ -316,83 +310,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3976897784788161269}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1372228050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1372228051}
-  - component: {fileID: 1372228054}
-  - component: {fileID: 1372228053}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1372228051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372228050}
-  m_LocalRotation: {x: -1.4004033e-14, y: -1, z: 0.000000021855694, w: 0.0000006407499}
-  m_LocalPosition: {x: -0, y: -0.93, z: 37}
-  m_LocalScale: {x: 0.5, y: 1, z: 6.5}
-  m_Children: []
-  m_Father: {fileID: 271530456}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
---- !u!23 &1372228053
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372228050}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d1b787cb4fdfbd04a82790ae5c378d39, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1372228054
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372228050}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1429503221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1429503221, guid: 2f7052c2fb194ac4db783b7cdb160e41,
@@ -978,26 +895,6 @@ PrefabInstance:
       propertyPath: Hearts.Array.data[9]
       value: 
       objectReference: {fileID: 2011754902}
-    - target: {fileID: 1641970348650261, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 139242415, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
-      propertyPath: ClassState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2053197763, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
-      propertyPath: Length
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2053197763, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
-      propertyPath: ScoutCritDashInd
-      value: 
-      objectReference: {fileID: 1372228050}
-    - target: {fileID: 2053197763, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
-      propertyPath: ScoutTeleportCooldown
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f1c1bc861c11b34990f6f8cc317c20f, type: 3}
 --- !u!1001 &4187108011129833349

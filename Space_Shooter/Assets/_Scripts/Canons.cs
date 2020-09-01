@@ -10,13 +10,16 @@ public class Canons : MonoBehaviour
     public ParticleSystem Leftps, Rightps;
     public float Firerate = 15f;
     public float nextTimeToFire = 0f;
-    public enum State { Tank, Commander, Scout }
+    public bool isCommanderHolo;
+    public Transform parent;
+    public enum State { Tank, Commander, CommanderHolo, Scout }
 
     public State ClassState;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+        parent = transform.parent;
         if (ClassState == State.Tank)
         {
             TankWeapon();
@@ -24,6 +27,10 @@ public class Canons : MonoBehaviour
         else if (ClassState == State.Commander)
         {
             CommanderWeapon();
+        }
+        else if (ClassState == State.CommanderHolo)
+        {
+            CommanderHoloWeapon();
         }
         else if (ClassState == State.Scout)
         {
@@ -36,18 +43,37 @@ public class Canons : MonoBehaviour
     {
         if (Time.timeScale != 0)
         {
-            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+            if (!isCommanderHolo)
             {
-                nextTimeToFire = Time.time + 1f / Firerate;
-                if (ClassState == State.Tank)
+                if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
                 {
-                    DuelFire();
-                }
-                else
-                {
-                    SingleFire();
+                    nextTimeToFire = Time.time + 1f / Firerate;
+                    if (ClassState == State.Tank)
+                    {
+                        DuelFire();
+                    }
+                    else
+                    {
+                        SingleFire();
+                    }
                 }
             }
+            else
+            {
+                if (Time.time >= nextTimeToFire)
+                {
+                    nextTimeToFire = Time.time + 1f / Firerate;
+                    if (ClassState == State.Tank)
+                    {
+                        DuelFire();
+                    }
+                    else
+                    {
+                        SingleFire();
+                    }
+                }
+            }
+            
             
         }
     }
@@ -58,9 +84,28 @@ public class Canons : MonoBehaviour
         {
             if (ObjectPooling.Instance.ObjectList[i].activeInHierarchy == false)
             {
-                ObjectPooling.Instance.ObjectList[i].SetActive(true);
-                ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
-                ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
+                if(ClassState == State.Commander)
+                {
+                    ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Commander;
+                    ObjectPooling.Instance.ObjectList[i].SetActive(true);
+                    ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
+                    ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
+                }
+                else if(ClassState == State.CommanderHolo)
+                {
+                    ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Scout;
+                    ObjectPooling.Instance.ObjectList[i].SetActive(true);
+                    ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
+                    ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
+                }
+                else
+                {
+                    ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Scout;
+                    ObjectPooling.Instance.ObjectList[i].SetActive(true);
+                    ObjectPooling.Instance.ObjectList[i].transform.position = CenterCanon.transform.position;
+                    ObjectPooling.Instance.ObjectList[i].transform.rotation = CenterCanon.transform.rotation;
+                }
+                
                 break;
             }
         }
@@ -165,6 +210,16 @@ public class Canons : MonoBehaviour
         {
             ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .2f;
             ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Commander;
+        }
+    }
+
+    public void CommanderHoloWeapon()
+    {
+        Firerate = 3f;
+        for (int i = 0; i < ObjectPooling.Instance.ObjectList.Count; i++)
+        {
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().Lifetime = .2f;
+            ObjectPooling.Instance.ObjectList[i].GetComponent<ShotBehavior>().ClassState = ShotBehavior.State.Scout;
         }
     }
 

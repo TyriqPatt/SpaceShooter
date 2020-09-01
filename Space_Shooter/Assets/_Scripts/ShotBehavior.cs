@@ -90,6 +90,20 @@ public class ShotBehavior : MonoBehaviour {
                     }
                 }
             }
+            else if (ClassState == State.Tank)
+            {
+                for (int i = 0; i < ObjectPooling.Instance.TSImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.TSImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.TSImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.TSImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.TSImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.TSImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
+            }
             else
             {
                 for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
@@ -122,6 +136,20 @@ public class ShotBehavior : MonoBehaviour {
                     }
                 }
             }
+            else if (ClassState == State.Tank)
+            {
+                for (int i = 0; i < ObjectPooling.Instance.TSImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.TSImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.TSImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.TSImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.TSImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.TSImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
+            }
             else
             {
                 for (int i = 0; i < ObjectPooling.Instance.ImpactList.Count; i++)
@@ -150,6 +178,20 @@ public class ShotBehavior : MonoBehaviour {
                         ObjectPooling.Instance.CImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
                         ObjectPooling.Instance.CImpactList[i].transform.position = transform.position;
                         ObjectPooling.Instance.CImpactList[i].transform.rotation = transform.rotation;
+                        break;
+                    }
+                }
+            }
+            else if (ClassState == State.Tank)
+            {
+                for (int i = 0; i < ObjectPooling.Instance.TSImpactList.Count; i++)
+                {
+                    if (ObjectPooling.Instance.TSImpactList[i].activeInHierarchy == false)
+                    {
+                        ObjectPooling.Instance.TSImpactList[i].SetActive(true);
+                        ObjectPooling.Instance.TSImpactList[i].GetComponent<DeactivateScript>().Duration = 1f;
+                        ObjectPooling.Instance.TSImpactList[i].transform.position = transform.position;
+                        ObjectPooling.Instance.TSImpactList[i].transform.rotation = transform.rotation;
                         break;
                     }
                 }
