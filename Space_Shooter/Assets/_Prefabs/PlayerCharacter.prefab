@@ -515,7 +515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1421391035
 RectTransform:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1501717404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24753,7 +24753,6 @@ GameObject:
   - component: {fileID: 33413632813713013}
   - component: {fileID: 23496527725159489}
   - component: {fileID: 1641970348650262}
-  - component: {fileID: 1641970348650264}
   - component: {fileID: 1641970348650263}
   - component: {fileID: 1641970348650265}
   - component: {fileID: 2053197763}
@@ -24846,18 +24845,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300004, guid: 21c6d0bb8170cae4f9d49bb728b3f524, type: 3}
---- !u!114 &1641970348650264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641970348650261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f725763158dd83e449830f70df91fdd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1641970348650263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24940,7 +24927,6 @@ GameObject:
   - component: {fileID: 33497836162816092}
   - component: {fileID: 23458322351004696}
   - component: {fileID: 1970449231352107}
-  - component: {fileID: 1970449231352109}
   - component: {fileID: 1970449231352108}
   - component: {fileID: 1970449231352110}
   - component: {fileID: 1691568525}
@@ -25033,18 +25019,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300010, guid: e0f90ad78680d6145b082ac69f7fc504, type: 3}
---- !u!114 &1970449231352109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970449231352106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f725763158dd83e449830f70df91fdd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1970449231352108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25128,7 +25102,6 @@ GameObject:
   - component: {fileID: 3976897783259598350}
   - component: {fileID: 3976897783259598351}
   - component: {fileID: 3976897783259598348}
-  - component: {fileID: 1556059865}
   - component: {fileID: 3976897784788161271}
   - component: {fileID: 470927632}
   - component: {fileID: 1892644687}
@@ -25235,18 +25208,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300006, guid: e0f90ad78680d6145b082ac69f7fc504, type: 3}
---- !u!114 &1556059865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3976897783259598338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f725763158dd83e449830f70df91fdd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3976897784788161271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25899,6 +25860,22 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -25918,22 +25895,6 @@ PrefabInstance:
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
@@ -26125,6 +26086,18 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -26144,18 +26117,6 @@ PrefabInstance:
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
@@ -26529,6 +26490,18 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.3
@@ -26548,18 +26521,6 @@ PrefabInstance:
     - target: {fileID: 19802312, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19849936, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76669db9a2fd1f54cb72f1683b19daf7, type: 3}
