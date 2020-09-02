@@ -19,8 +19,8 @@ public class AddRooms : MonoBehaviour
     public GameObject MMObject;
     public Image MMBackGround;
     public int NumInlist;
-    BoxCollider BC;
-    public Vector3 BCSize;
+    //BoxCollider BC;
+    //public Vector3 BCSize;
 
 
     private void Start()
@@ -28,11 +28,11 @@ public class AddRooms : MonoBehaviour
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         templates.rooms.Add(this.gameObject);
         wallup();
-        BC = GetComponent<BoxCollider>();
-        BCSize.x = 85;
-        BCSize.y = 5;
-        BCSize.z = 45;
-        BC.size = BCSize;
+        //BC = GetComponent<BoxCollider>();
+        //BCSize.x = 85;
+        //BCSize.y = 5;
+        //BCSize.z = 45;
+        //BC.size = BCSize;
     }
 
     public void wallup()
