@@ -19,7 +19,7 @@ public class Isometric_Cam : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         HandleCam();
     }

@@ -81,6 +81,7 @@
     <Compile Include="Assets\_Scripts\DeactivateScript.cs" />
     <Compile Include="Assets\_Scripts\Destroyer.cs" />
     <Compile Include="Assets\_Scripts\DestroyScript.cs" />
+    <Compile Include="Assets\_Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\_Scripts\Isometric_Cam.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_BasicProjectileMovement.cs" />
     <Compile Include="Assets\_Scripts\Jesse'sScripts\JR_DisperseStyle.cs" />
