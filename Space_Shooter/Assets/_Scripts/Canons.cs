@@ -17,7 +17,7 @@ public class Canons : MonoBehaviour
     public State ClassState;
 
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         parent = transform.parent;
         if (ClassState == State.Tank)

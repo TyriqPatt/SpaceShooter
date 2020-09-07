@@ -45,9 +45,9 @@ public class DashAbility : MonoBehaviour
 
     IEnumerator TankMeleeDash()
     {
-        yield return new WaitForSeconds(Movement.dashDuration);
         TankMelee.gameObject.SetActive(true);
-        yield return new WaitForSeconds(.6f);
+        TankMelee.transform.position = transform.position;
+        yield return new WaitForSeconds(1f);
         TankMelee.gameObject.SetActive(false);
     }
 
