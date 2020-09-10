@@ -32,7 +32,5 @@ public class EnemyMovement : MonoBehaviour
             //transform.parent.position = smoothpos;
             //smoothpos = Vector3.Lerp(transform.parent.transform.position, player.transform.position, speed * Time.deltaTime);
         }
-        
-
     }
 }

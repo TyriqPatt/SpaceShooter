@@ -9,14 +9,20 @@ public class Orbit : MonoBehaviour
     public float speed;
     public float TimeTilSwitch;
     public bool pingpong;
+    public bool RandSpeed;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         if (pingpong)
         {
-            StartCoroutine(reverse(TimeTilSwitch));
+            StartCoroutine(reverse(TimeTilSwitch + .1f));
         }
+        if (RandSpeed)
+        {
+            speed = Random.Range(1, 4);
+        }
+
     }
 
     // Update is called once per frame
@@ -28,7 +34,15 @@ public class Orbit : MonoBehaviour
         }
         else
         {
-            transform.RotateAround(Target.position, Vector3.down, speed);
+            if (!RandSpeed)
+            {
+                transform.RotateAround(Target.position, Vector3.down, speed);
+            }
+            else
+            {
+                transform.RotateAround(Target.position, Vector3.down, speed);
+            }
+            
         }
     }
 

@@ -1004,6 +1004,7 @@ MonoBehaviour:
   - {fileID: 3852869065508022181, guid: 5aeb640015869c34193d34f5ef74b1a5, type: 3}
   - {fileID: 4425539685299616990, guid: 5885b48c698cbc343a7d182c3aefc88a, type: 3}
   - {fileID: 1088663360344860516, guid: 6bc0d62328f8aed418c48a5048e96028, type: 3}
+  - {fileID: 8784783126431678389, guid: 7f2f6c5167d84d041ad79007143bec9f, type: 3}
   - {fileID: 0}
   rand: 0
   scasca: 0
