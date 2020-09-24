@@ -24433,7 +24433,7 @@ Transform:
   - {fileID: 3747442788920516018}
   - {fileID: 3747442788920519264}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -89.980194, y: 0, z: 0}
 --- !u!4 &3747442788920516018
 Transform:
@@ -24570,6 +24570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976897783772286853, guid: 9f1c1bc861c11b34990f6f8cc317c20f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3976897783673031770, guid: 9f1c1bc861c11b34990f6f8cc317c20f,
         type: 3}
@@ -24916,7 +24921,7 @@ PrefabInstance:
     - target: {fileID: 5696109313265330102, guid: aa236734eef253b48aee316a8a36ce2f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5696109313265330102, guid: aa236734eef253b48aee316a8a36ce2f,
         type: 3}
