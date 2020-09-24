@@ -122,6 +122,7 @@
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiLightFlicker.cs" />
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiPitchRandomizer.cs" />
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiRotation.cs" />
+    <Compile Include="Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\DEMON LORD\SCRIPT\ScrollingUVs.cs" />
     <Compile Include="Assets\IdleBehavior.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
@@ -132,13 +133,13 @@
     <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Readme.txt" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
-    <None Include="Assets\_SciFi_Assets\HiRezSpaceshipsCreatorFree\Readme.txt" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\AlphaBlended_Scroll01.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\AlphaBlendedMobile_Scroll01.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\Additive_Scroll01.shader" />
+    <None Include="Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\GOLEM\SHADER\SelfIllumBumpedSpecular.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\AdditiveMobile_Scroll01.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
@@ -147,31 +148,31 @@
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
     <None Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Arsenal Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -357,13 +358,13 @@
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
