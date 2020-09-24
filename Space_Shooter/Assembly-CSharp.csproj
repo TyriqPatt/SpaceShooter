@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Extra_Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\DEMON LORD\SCRIPT\ScrollingUVs.cs" />
     <Compile Include="Assets\_Prefabs\Jesse'sPrefabs\BlackbeardClassPirateBattlecarrier\Scripts\CombineChildren.cs" />
     <Compile Include="Assets\_Prefabs\Jesse'sPrefabs\BlackbeardClassPirateBattlecarrier\Scripts\MeshCombineUtility.cs" />
     <Compile Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Scripts\ParticleSystemController\ParticleSystemController.cs" />
@@ -122,7 +123,6 @@
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiLightFlicker.cs" />
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiPitchRandomizer.cs" />
     <Compile Include="Assets\Archanor\Sci-Fi Arsenal\Sci-Fi Effects\Scripts\SciFiRotation.cs" />
-    <Compile Include="Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\DEMON LORD\SCRIPT\ScrollingUVs.cs" />
     <Compile Include="Assets\IdleBehavior.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
@@ -139,7 +139,7 @@
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\AlphaBlendedMobile_Scroll01.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\Additive_Scroll01.shader" />
-    <None Include="Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\GOLEM\SHADER\SelfIllumBumpedSpecular.shader" />
+    <None Include="Assets\_Extra_Assets\HEROIC FANTASY CREATURES FULL PACK\DEMONIC CREATURES PACK\GOLEM\SHADER\SelfIllumBumpedSpecular.shader" />
     <None Include="Assets\_Prefabs\Jesse'sPrefabs\GabrielAguiarProductions\Unique_Projectiles_Volume_2\Shaders\AdditiveMobile_Scroll01.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
