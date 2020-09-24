@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A1309D70-B6F5-52CF-F13A-A13D5A30ED55}</ProjectGuid>
+    <ProjectGuid>{5BD46126-9AE4-E2BA-FDBE-1EF0CD6BAA8B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -62,34 +62,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tutorial_Info\Scripts\Editor\ReadmeEditor.cs" />
-    <Compile Include="Assets\Tutorial_Info\Scripts\Editor\ReadmeStarSparrowEditor.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v1\Scripts\Editor\CustomShaderGUI.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v1\Scripts\Editor\RFX1_CustomMaterialInspectorParticle.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v1\Shaders\Editor\RFX1_UberDecalGUI.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v4\Effects\Scripts\Editor\RFX4_CustomMaterialInspectorParticle.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v4\Effects\Scripts\Editor\RFX4_ReplaceDistortionForMobile.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberDecalGUI.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberDistortionGUI.cs" />
+    <Compile Include="Assets\_Extra_Assets\Realistic Effects Pack v4\Effects\Shaders\Editor\RFX4_UberParticleGUI.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -289,38 +295,23 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.OSXStandalone.Extensions">
-      <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/Tyriq/Documents/GitHub/SpaceShooter/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+      <HintPath>C:/Users/Tyriq's PC/Documents/GitHub/SpaceShooter/Space_Shooter/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/2019.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -679,7 +670,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{31EA003C-1CF9-D946-A919-8AC5ED6BE76A}</Project>
+      <Project>{6F4D1449-99C3-B60A-6C3A-862810D457C5}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>
