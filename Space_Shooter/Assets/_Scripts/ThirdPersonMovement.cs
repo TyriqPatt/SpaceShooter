@@ -87,6 +87,10 @@ public class ThirdPersonMovement : MonoBehaviour
                 Anim.SetTrigger("Attack");
                
             }
+            //if (comboChain == 1 && Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
+            //{
+            //    Anim.SetBool("IsinCombo", false);
+            //}
             if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
             {
                 comboChain += 1;
@@ -94,6 +98,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 Anim.SetBool("IsinCombo", true);
                 Anim.SetTrigger("Attack2");
             }
+
             if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash2"))
             {
                 comboChain += 1;
@@ -103,14 +108,29 @@ public class ThirdPersonMovement : MonoBehaviour
             }
 
         }
-        if(comboChain > 0)
+        if (comboChain == 1 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
         {
-            ComboReset += Time.deltaTime;
-            if(ComboReset >= 1f)
-            {
-                comboChain = 0;
-                Anim.SetBool("IsinCombo", false);
-            }
+            Anim.SetBool("IsinCombo", false);
+            comboChain = 0;
         }
+        if (comboChain == 2 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash2"))
+        {
+            Anim.SetBool("IsinCombo", false);
+            comboChain = 0;
+        }
+        if (comboChain == 3 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash3"))
+        {
+            Anim.SetBool("IsinCombo", false);
+            comboChain = 0;
+        }
+        //if (comboChain >= 3)
+        //{
+        //    ComboReset += Time.deltaTime;
+        //    if(ComboReset >= 1f)
+        //    {
+        //        comboChain = 0;
+        //        Anim.SetBool("IsinCombo", false);
+        //    }
+        //}
     }
 }
