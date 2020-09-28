@@ -11,18 +11,16 @@ public class ThirdPersonMovement : MonoBehaviour
     float curSpeed;
     float speedSmoothVel;
     float speedSmoothTime = .1f;
-    float rotSpeed = .1f;
+    public float rotSpeed = .1f;
     float gravity = 3;
     int comboChain;
-    float ComboReset;
-
 
     Transform MainCam;
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        controller = GetComponentInParent<CharacterController>();
         MainCam = Camera.main.transform;
     }
 
@@ -53,14 +51,14 @@ public class ThirdPersonMovement : MonoBehaviour
             gravityVector.y -= gravity;
         }
 
-        if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash") || Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash2") || Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash3"))
+        if (comboChain >= 1)
         {
             desiredMoveDir = Vector3.zero;
         }
 
         if (desiredMoveDir != Vector3.zero)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDir), rotSpeed);
+            transform.parent.rotation = Quaternion.Slerp(transform.parent.rotation, Quaternion.LookRotation(desiredMoveDir), rotSpeed);
             Anim.SetBool("isWalking", true);
         }
         else
@@ -82,55 +80,52 @@ public class ThirdPersonMovement : MonoBehaviour
             if(comboChain == 0)
             {
                 comboChain += 1;
-                ComboReset = 0;
                 Anim.SetBool("IsinCombo", true);
-                Anim.SetTrigger("Attack");
-               
+                Anim.SetInteger("Combo", 1);
+
             }
-            //if (comboChain == 1 && Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
-            //{
-            //    Anim.SetBool("IsinCombo", false);
-            //}
             if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
             {
-                comboChain += 1;
-                ComboReset = 0;
+                comboChain = 2;
                 Anim.SetBool("IsinCombo", true);
-                Anim.SetTrigger("Attack2");
+                Anim.SetInteger("Combo", 2);
             }
-
-            if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash2"))
+            if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash_2"))
             {
-                comboChain += 1;
-                ComboReset = 0;
+                comboChain = 3;
                 Anim.SetBool("IsinCombo", true);
-                Anim.SetTrigger("Attack3");
+                Anim.SetInteger("Combo", 3);
             }
+        }
+    }
 
-        }
-        if (comboChain == 1 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
+    void EndCombo1()
+    {
+        if (comboChain == 1)
         {
-            Anim.SetBool("IsinCombo", false);
             comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("Combo", 0);
         }
-        if (comboChain == 2 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash2"))
+    }
+
+    void EndCombo2()
+    {
+        if (comboChain == 2)
         {
-            Anim.SetBool("IsinCombo", false);
             comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("Combo", 0);
         }
-        if (comboChain == 3 && !Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash3"))
+    }
+
+    void EndCombo3()
+    {
+        if (comboChain == 3)
         {
-            Anim.SetBool("IsinCombo", false);
             comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("Combo", 0);
         }
-        //if (comboChain >= 3)
-        //{
-        //    ComboReset += Time.deltaTime;
-        //    if(ComboReset >= 1f)
-        //    {
-        //        comboChain = 0;
-        //        Anim.SetBool("IsinCombo", false);
-        //    }
-        //}
     }
 }
