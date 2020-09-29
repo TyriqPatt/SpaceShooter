@@ -14,6 +14,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float rotSpeed = .1f;
     float gravity = 3;
     int comboChain;
+    bool heavyAtk;
 
     Transform MainCam;
 
@@ -51,7 +52,7 @@ public class ThirdPersonMovement : MonoBehaviour
             gravityVector.y -= gravity;
         }
 
-        if (comboChain >= 1)
+        if (comboChain >= 1 || heavyAtk)
         {
             desiredMoveDir = Vector3.zero;
         }
@@ -97,6 +98,12 @@ public class ThirdPersonMovement : MonoBehaviour
                 Anim.SetInteger("Combo", 3);
             }
         }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            Anim.SetTrigger("Heavy");
+            heavyAtk = true;
+        }
     }
 
     void EndCombo1()
@@ -127,5 +134,10 @@ public class ThirdPersonMovement : MonoBehaviour
             Anim.SetBool("IsinCombo", false);
             Anim.SetInteger("Combo", 0);
         }
+    }
+
+    void EndHeavy()
+    {
+        heavyAtk = false;
     }
 }
