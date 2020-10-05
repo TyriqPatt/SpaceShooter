@@ -67,7 +67,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Anim.SetBool("isWalking", false);
         }
 
-        float targetSpeed = moveSpeed * movementInput.magnitude;
+        float targetSpeed = moveSpeed * movementInput.normalized.magnitude;
         curSpeed = Mathf.SmoothDamp(curSpeed, targetSpeed, ref speedSmoothVel, speedSmoothTime);
 
         controller.Move(desiredMoveDir * curSpeed * Time.deltaTime);
