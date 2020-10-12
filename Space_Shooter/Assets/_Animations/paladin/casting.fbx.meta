@@ -60,7 +60,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.98390806
-        functionName: EndHeavy
+        functionName: EndMagicCombo3
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: ab2853ed000c44c49a440f4d97cc69c1,
           type: 3}

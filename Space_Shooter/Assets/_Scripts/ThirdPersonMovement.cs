@@ -13,8 +13,8 @@ public class ThirdPersonMovement : MonoBehaviour
     float speedSmoothTime = .1f;
     public float rotSpeed = .1f;
     float gravity = 3;
-    int comboChain;
-    bool heavyAtk;
+    int Basic_comboChain;
+    int Magic_comboChain;
 
     Transform MainCam;
 
@@ -52,7 +52,7 @@ public class ThirdPersonMovement : MonoBehaviour
             gravityVector.y -= gravity;
         }
 
-        if (comboChain >= 1 || heavyAtk)
+        if (Basic_comboChain >= 1 || Magic_comboChain >= 1)
         {
             desiredMoveDir = Vector3.zero;
         }
@@ -78,22 +78,22 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if(comboChain == 0)
+            if(Basic_comboChain == 0)
             {
-                comboChain += 1;
+                Basic_comboChain += 1;
                 Anim.SetBool("IsinCombo", true);
                 Anim.SetInteger("Combo", 1);
 
             }
             if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash"))
             {
-                comboChain = 2;
+                Basic_comboChain = 2;
                 Anim.SetBool("IsinCombo", true);
                 Anim.SetInteger("Combo", 2);
             }
             if (Anim.GetCurrentAnimatorStateInfo(0).IsName("BasicSlash_2"))
             {
-                comboChain = 3;
+                Basic_comboChain = 3;
                 Anim.SetBool("IsinCombo", true);
                 Anim.SetInteger("Combo", 3);
             }
@@ -101,43 +101,98 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
-            Anim.SetTrigger("Heavy");
-            heavyAtk = true;
+
+            if (Magic_comboChain == 0)
+            {
+                Magic_comboChain += 1;
+                Anim.SetBool("IsinCombo", true);
+                Anim.SetInteger("MagicCombo", 1);
+
+            }
+            if (Anim.GetCurrentAnimatorStateInfo(0).IsName("MagicAttack1"))
+            {
+                Magic_comboChain = 2;
+                Anim.SetBool("IsinCombo", true);
+                Anim.SetInteger("MagicCombo", 2);
+            }
+            if (Anim.GetCurrentAnimatorStateInfo(0).IsName("MagicAttack2"))
+            {
+                Magic_comboChain = 3;
+                Anim.SetBool("IsinCombo", true);
+                Anim.SetInteger("MagicCombo", 3);
+            }
         }
     }
 
     void EndCombo1()
     {
-        if (comboChain == 1)
+        if (Basic_comboChain == 1)
         {
-            comboChain = 0;
+            Basic_comboChain = 0;
+            Magic_comboChain = 0;
             Anim.SetBool("IsinCombo", false);
             Anim.SetInteger("Combo", 0);
+            Anim.SetInteger("MagicCombo", 0);
         }
     }
 
     void EndCombo2()
     {
-        if (comboChain == 2)
+        if (Basic_comboChain == 2)
         {
-            comboChain = 0;
+            Basic_comboChain = 0;
+            Magic_comboChain = 0;
             Anim.SetBool("IsinCombo", false);
             Anim.SetInteger("Combo", 0);
+            Anim.SetInteger("MagicCombo", 0);
         }
     }
 
     void EndCombo3()
     {
-        if (comboChain == 3)
+        if (Basic_comboChain == 3)
         {
-            comboChain = 0;
+            Basic_comboChain = 0;
+            Magic_comboChain = 0;
             Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("Combo", 0);
+            Anim.SetInteger("MagicCombo", 0);
+        }
+    }
+
+    void EndMagicCombo1()
+    {
+        if (Magic_comboChain == 1)
+        {
+            Magic_comboChain = 0;
+            Basic_comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("MagicCombo", 0);
             Anim.SetInteger("Combo", 0);
         }
     }
 
-    void EndHeavy()
+    void EndMagicCombo2()
     {
-        heavyAtk = false;
+        if (Magic_comboChain == 2)
+        {
+            Magic_comboChain = 0;
+            Basic_comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("MagicCombo", 0);
+            Anim.SetInteger("Combo", 0);
+        }
+    }
+
+    void EndMagicCombo3()
+    {
+        if (Magic_comboChain == 3)
+        {
+            Magic_comboChain = 0;
+            Basic_comboChain = 0;
+            Anim.SetBool("IsinCombo", false);
+            Anim.SetInteger("MagicCombo", 0);
+            Anim.SetInteger("Combo", 0);
+        }
     }
 }
